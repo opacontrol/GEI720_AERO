@@ -1,5 +1,5 @@
 Model {
-  Name			  "AVION_LONGITUDINAL_inc"
+  Name			  "AVION_LONGITUDINAL"
   Version		  8.2
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
@@ -88,7 +88,7 @@ Model {
       Name		      "pN"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.70"
+    ComputedModelVersion    "1.71"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -133,11 +133,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"25"
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
 	Extents			[1332.0, 609.0]
-	ZoomFactor		[1.0]
-	Offset			[0.0, 5.6843418860808015e-14]
+	ZoomFactor		[0.873043769353084]
+	Offset			[-9.7117523006137958, 53.407544095091794]
       }
     }
   }
@@ -147,9 +147,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 03 17:06:22 2016"
-  RTWModifiedTimeStamp	  400093577
-  ModelVersionFormat	  "1.%<AutoIncrement:70>"
+  LastModifiedDate	  "Thu Nov 03 17:07:24 2016"
+  RTWModifiedTimeStamp	  400093613
+  ModelVersionFormat	  "1.%<AutoIncrement:71>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -191,11 +191,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "AVION_LONGITUDINAL_inc"
+    model_		    "AVION_LONGITUDINAL"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "AVION_LONGITUDINAL_inc"
+      Cell		      "AVION_LONGITUDINAL"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1031,9 +1031,9 @@ Model {
     }
   }
   System {
-    Name		    "AVION_LONGITUDINAL_inc"
+    Name		    "AVION_LONGITUDINAL"
     Location		    [-8, -8, 1374, 776]
-    Open		    off
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1551,7 +1551,7 @@ Model {
       Ports		      [3, 4]
       Position		      [655, 323, 765, 447]
       ZOrder		      -2
-      BackgroundColor	      "red"
+      BackgroundColor	      "lightBlue"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
       RTWSystemCode	      "Auto"
@@ -1562,7 +1562,7 @@ Model {
       System {
 	Name			"DYN"
 	Location		[-8, -8, 1374, 776]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
