@@ -83,12 +83,12 @@
 %   deltae = 2.29707;     % gouvernail de profondeur à l'équilibre
 %   ae     = 0.63467;     % propulsion à l'équilibre
 X0  = [80, 0, 0, 0]'; IX  = [1];
-U0  = [0, 0]'; IU  = [];
-Y0  = [0, 0, 0, 0]'; IY  = [1];
+U0  = []; IU  = [];
+Y0  = [0, 0, 0, 0, 0]'; IY  = [5];
 DX0 = []; IDX = [];  %% Always empty vector
 
-tolerance = 1E-04;
-OPTIONS = [1; tolerance; tolerance; tolerance]';
+tolerance = 1E-08;
+OPTIONS = [1; tolerance; tolerance; tolerance];
 [Xe, Ue, Ye, DXe, OPTIONS] = trim('AVION_TRIM',X0,U0,Y0,IX,IU, ...
                                   IY,DX0,IDX,OPTIONS);
 
@@ -100,8 +100,9 @@ alfae = Xe(2);
 tetae = Xe(3);
 qe = Xe(4);
 
-ae = Ue(1);
-deltae = Ue(2);
+deltae = Ue(1);
+ae = Ue(2);
+
 etat_equil = [VTe, alfae, tetae, qe]; % conditions d'equilibre 
 
 % Conditions initiales:
