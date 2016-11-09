@@ -74,8 +74,7 @@
 % les valeurs a l'equilibre ci-dessous pour celles à 80 m/s.
 % 
 
-%   VTe   = 80.00000;		% vitesse à l'équilibre en m/s
-
+%   VTe   = 80.00000;		% vitesse à l'équilibre en m/s.
 %   alfae =  0.10941;		% angle d'attaque à l'équilibre en rad (6.26845 deg)
 %   tetae =  0.10941;		% angle de tangage à l'équilibre en rad (6.26845 deg)
 %                         % alfae = tetae donc vol horizontal (gamae = 0.0)
@@ -83,18 +82,31 @@
 % 
 %   deltae = 2.29707;     % gouvernail de profondeur à l'équilibre
 %   ae     = 0.63467;     % propulsion à l'équilibre
+X0  = [80, 0, 0, 0]'; IX  = [1];
+U0  = [0, 0]'; IU  = [];
+Y0  = [0, 0, 0, 0]'; IY  = [1];
+DX0 = []; IDX = [];  %% Always empty vector
 
-trim('AVION_TRIM', VT0, ALFA0, TETA0, Q0, DELTA0, A0, ...
-     IVT0, IALPHA0, ITETA0, IQ0, IDELTA0, IA0);
+tolerance = 1E-04;
+OPTIONS = [1; tolerance; tolerance; tolerance]';
+[Xe, Ue, Ye, DXe, OPTIONS] = trim('AVION_TRIM',X0,U0,Y0,IX,IU, ...
+                                  IY,DX0,IDX,OPTIONS);
 
 %   alfae_deg =  6.26845;		% angle d'attaque en deg
 %   tetae_deg =  6.26845;		% angle de tangage en deg
 
-  etat_equil = [VTe, alfae, tetae, qe]; % conditions d'equilibre 
+VTe = Xe(1);
+alfae = Xe(2);
+tetae = Xe(3);
+qe = Xe(4);
+
+ae = Ue(1);
+deltae = Ue(2);
+etat_equil = [VTe, alfae, tetae, qe]; % conditions d'equilibre 
 
 % Conditions initiales:
 % --------------------
 % On choisit la dynamique initiale a l'equilibre (pas tjrs le cas). 
 % Voir le bloc INTEG_DYN du modele Simulink ou elles apparaissent.
 
-  etat_ini = etat_equil;
+etat_ini = etat_equil;

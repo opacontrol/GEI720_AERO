@@ -73,23 +73,32 @@
 % Pour comparer avec le fichier de validation, ne pas oublier (evidemment) de changer 
 % les valeurs a l'equilibre ci-dessous pour celles à 80 m/s.
 % 
-  VTe   = 80.00000;		% vitesse à l'équilibre en m/s
-  alfae =  0.10941;		% angle d'attaque à l'équilibre en rad (6.26845 deg)
-  tetae =  0.10941;		% angle de tangage à l'équilibre en rad (6.26845 deg)
-                        % alfae = tetae donc vol horizontal (gamae = 0.0)
-  qe    =  0.00000;		% 'pitch rate' est nul à l'équilibre
 
-  deltae = 2.29707;     % gouvernail de profondeur à l'équilibre
-  ae     = 0.63467;     % propulsion à l'équilibre
-  
+%   VTe   = 80.00000;		% vitesse à l'équilibre en m/s.
+%   alfae =  0.10941;		% angle d'attaque à l'équilibre en rad (6.26845 deg)
+%   tetae =  0.10941;		% angle de tangage à l'équilibre en rad (6.26845 deg)
+%                         % alfae = tetae donc vol horizontal (gamae = 0.0)
+%   qe    =  0.00000;		% 'pitch rate' est nul à l'équilibre
+% 
+%   deltae = 2.29707;     % gouvernail de profondeur à l'équilibre
+%   ae     = 0.63467;     % propulsion à l'équilibre
+X0  = [80, 0, 0, 0]; IX  = [];
+U0  = []; IU  = [];
+Y0  = []; IY  = [];
+DX0 = []; IDX = [];  %% Always empty vector
+
+OPTIONS = [1; tolerance; tolerance; tolerance];
+[Xe, Ue, Ye, DXe, OPTIONS] = trim('AVION_TRIM',X0,U0,Y0,IX,IU, ...
+                                  IY,DX0,IDX,OPTIONS);
+
 %   alfae_deg =  6.26845;		% angle d'attaque en deg
 %   tetae_deg =  6.26845;		% angle de tangage en deg
 
-  etat_equil = [VTe, alfae, tetae, qe]; % conditions d'equilibre 
+etat_equil = [VTe, alfae, tetae, qe]; % conditions d'equilibre 
 
 % Conditions initiales:
 % --------------------
 % On choisit la dynamique initiale a l'equilibre (pas tjrs le cas). 
 % Voir le bloc INTEG_DYN du modele Simulink ou elles apparaissent.
 
-  etat_ini = etat_equil;
+etat_ini = etat_equil;
