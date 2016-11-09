@@ -73,7 +73,9 @@
 % Pour comparer avec le fichier de validation, ne pas oublier (evidemment) de changer 
 % les valeurs a l'equilibre ci-dessous pour celles à 80 m/s.
 % 
+
 %   VTe   = 80.00000;		% vitesse à l'équilibre en m/s
+
 %   alfae =  0.10941;		% angle d'attaque à l'équilibre en rad (6.26845 deg)
 %   tetae =  0.10941;		% angle de tangage à l'équilibre en rad (6.26845 deg)
 %                         % alfae = tetae donc vol horizontal (gamae = 0.0)
@@ -81,7 +83,10 @@
 % 
 %   deltae = 2.29707;     % gouvernail de profondeur à l'équilibre
 %   ae     = 0.63467;     % propulsion à l'équilibre
-  
+
+trim('AVION_TRIM', VT0, ALFA0, TETA0, Q0, DELTA0, A0, ...
+     IVT0, IALPHA0, ITETA0, IQ0, IDELTA0, IA0);
+
 %   alfae_deg =  6.26845;		% angle d'attaque en deg
 %   tetae_deg =  6.26845;		% angle de tangage en deg
 
