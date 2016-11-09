@@ -111,3 +111,7 @@ etat_equil = [VTe, alfae, tetae, qe]; % conditions d'equilibre
 % Voir le bloc INTEG_DYN du modele Simulink ou elles apparaissent.
 
 etat_ini = etat_equil;
+
+% Calculer le modele lineaire
+[A, B, C, D] = linmod('AVION_TRIM', Xe, Ue);
+vp = eig(A);
