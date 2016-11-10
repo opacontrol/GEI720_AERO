@@ -84,7 +84,7 @@
 %   ae     = 0.63467;     % propulsion à l'équilibre
 X0  = [80, 0, 0, 0]'; IX  = [1];
 U0  = []; IU  = [];
-Y0  = [0, 0, 0, 0, 1]'; IY  = [5];
+Y0  = [0, 0, 0, 0, 0]'; IY  = [5];
 DX0 = []; IDX = [];  %% Always empty vector
 
 tolerance = 1E-08;
