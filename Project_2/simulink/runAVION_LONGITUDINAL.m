@@ -29,39 +29,39 @@
   figure(1)
   subplot(2,1,1)
   plot(t, [y(:,1)],'LineWidth',2), grid
-%   hold on
-%   plot(t, [y(:,17)],'c','LineWidth',2)
+  hold on
+  plot(t, [y(:,17)],'c','LineWidth',2)
   xlabel('Temps (s)', 'FontWeight', 'bold')
   ylabel('Vitesse (m/s)', 'FontWeight', 'bold')
   title('Vitesse et angle d''attaque en fonction du temps', 'FontWeight', 'bold')
   
   subplot(2,1,2)
   plot(t, [y(:,2)],'LineWidth',2), grid
-%   hold on
-%   plot(t, [y(:,18)],'c','LineWidth',2);
+  hold on
+  plot(t, [y(:,18)],'c','LineWidth',2);
   xlabel('Temps (s)', 'FontWeight', 'bold')
   ylabel('Angle d''attaque (deg)', 'FontWeight', 'bold')
   
   figure(2)
   subplot(2,1,1)
   plot(t, [y(:,3)],'LineWidth',2), grid
-%   hold on
-%   plot(t, [y(:,19)],'c','LineWidth',2)
+  hold on
+  plot(t, [y(:,19)],'c','LineWidth',2)
   xlabel('Temps (s)', 'FontWeight', 'bold')
   ylabel('Angle de tangage (deg)', 'FontWeight', 'bold')
   title('Angle et vitesse angulaire en tangage en fonction du temps', 'FontWeight', 'bold')
 
   subplot(2,1,2)
   plot(t, [y(:,4)],'LineWidth',2), grid
-%   hold on
-%   plot(t, [y(:,20)],'c','LineWidth',2)
+  hold on
+  plot(t, [y(:,20)],'c','LineWidth',2)
   xlabel('Temps (s)', 'FontWeight', 'bold')
   ylabel('Vitesse angulaire en tangage (deg/s)', 'FontWeight', 'bold')
 
   figure(3)
   plot(t, [y(:,5)],'LineWidth',2), grid
-%   hold on
-%   plot(t, [y(:,21)],'c','LineWidth',2)
+  hold on
+  plot(t, [y(:,21)],'c','LineWidth',2)
   xlabel('Temps (s)', 'FontWeight', 'bold')
   ylabel('Angle de vol (deg)', 'FontWeight', 'bold')
   title('Angle de vol (''flight path angle'') en fonction du temps', 'FontWeight', 'bold')
@@ -70,16 +70,16 @@
 
   figure(4)
   plot(y(:,16)/1000, y(:,15)/1000,'LineWidth',2), grid
-%   hold on
-%   plot(y(:,22)/1000, y(:,23)/1000,'c','LineWidth',2)
+  hold on
+  plot(y(:,22)/1000, y(:,23)/1000,'c','LineWidth',2)
   xlabel('Position horizontale (km)', 'FontWeight', 'bold')
   ylabel('Altitude (km)', 'FontWeight', 'bold')
   title('Altitude en fonction de la position horizontale', 'FontWeight', 'bold')
    
   figure(5)
   plot(t, [y(:,4)],'-','LineWidth',2), grid
-%   hold on
-%   plot(t, [y(:,20)],'--','LineWidth',2)
+  hold on
+  plot(t, [y(:,20)],'--','LineWidth',2)
   V = axis;
   axis([495, 540, V(3), V(4)])
   xlabel('Temps (s)', 'FontWeight', 'bold')
