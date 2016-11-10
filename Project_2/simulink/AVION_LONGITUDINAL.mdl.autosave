@@ -5,7 +5,7 @@ Model {
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
-    NumRootOutports	    23
+    NumRootOutports	    21
     Outport {
       Name		      "VT"
       BusObject		      ""
@@ -133,20 +133,8 @@ Model {
       BusOutputAsStruct	      "off"
       UnitExpr		      "inherit"
     }
-    Outport {
-      Name		      "h1"
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      UnitExpr		      "inherit"
-    }
-    Outport {
-      Name		      "pN1"
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      UnitExpr		      "inherit"
-    }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.130"
+    ComputedModelVersion    "1.122"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -197,7 +185,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[1558.0, 708.0]
 	ZoomFactor		[0.8]
-	Offset			[-318.24720253698274, 429.45876952709148]
+	Offset			[-238.28817672628463, 335.49299237618783]
       }
     }
   }
@@ -207,9 +195,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "deemm"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 09 19:52:45 2016"
-  RTWModifiedTimeStamp	  400621881
-  ModelVersionFormat	  "1.%<AutoIncrement:130>"
+  LastModifiedDate	  "Wed Nov 09 19:00:53 2016"
+  RTWModifiedTimeStamp	  400618945
+  ModelVersionFormat	  "1.%<AutoIncrement:122>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1175,19 +1163,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "318"
-    Block {
-      BlockType		      Gain
-      Name		      "\n"
-      SID		      "316"
-      Position		      [908, 970, 972, 1035]
-      ZOrder		      88
-      BlockRotation	      270
-      BlockMirror	      on
-      BackgroundColor	      "green"
-      NamePlacement	      "alternate"
-      Gain		      "d2r_cst"
-    }
+    SIDHighWatermark	    "296"
     Block {
       BlockType		      SubSystem
       Name		      "AERO"
@@ -1685,7 +1661,7 @@ Model {
       Name		      "Add1"
       SID		      "283"
       Ports		      [2, 1]
-      Position		      [340, 802, 370, 833]
+      Position		      [305, 802, 335, 833]
       ZOrder		      56
       Inputs		      "-+"
       InputSameDT	      off
@@ -1711,19 +1687,19 @@ Model {
     }
     Block {
       BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "282"
+      Position		      [195, 740, 240, 770]
+      ZOrder		      55
+      Value		      "Ue"
+    }
+    Block {
+      BlockType		      Constant
       Name		      "Constant2"
       SID		      "286"
       Position		      [665, 740, 710, 770]
       ZOrder		      58
       Value		      "Ye"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant3"
-      SID		      "298"
-      Position		      [220, 750, 265, 780]
-      ZOrder		      71
-      Value		      "Ue"
     }
     Block {
       BlockType		      SubSystem
@@ -3234,49 +3210,10 @@ Model {
       Name		      "Demux6"
       SID		      "290"
       Ports		      [1, 4]
-      Position		      [970, 784, 975, 906]
+      Position		      [1020, 784, 1025, 906]
       ZOrder		      63
       BackgroundColor	      "black"
       ShowName		      off
-    }
-    Block {
-      BlockType		      Demux
-      Name		      "Demux7"
-      SID		      "302"
-      Ports		      [1, 4]
-      Position		      [1120, 1014, 1125, 1136]
-      ZOrder		      85
-      BackgroundColor	      "black"
-      ShowName		      off
-      Port {
-	PortNumber		1
-	Name			"alfa"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		2
-	Name			"teta"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		3
-	Name			"q"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Demux
-      Name		      "Demux8"
-      SID		      "303"
-      Ports		      [1, 2]
-      Position		      [1585, 1043, 1590, 1107]
-      ZOrder		      84
-      BackgroundColor	      "black"
-      ShowName		      off
-      Outputs		      "2"
     }
     Block {
       BlockType		      Integrator
@@ -3301,16 +3238,6 @@ Model {
       Ports		      [1, 1]
       Position		      [1325, 553, 1375, 627]
       ZOrder		      -9
-      BackgroundColor	      "green"
-      InitialCondition	      "pos_ini"
-    }
-    Block {
-      BlockType		      Integrator
-      Name		      "INTEG_POS1"
-      SID		      "304"
-      Ports		      [1, 1]
-      Position		      [1505, 1038, 1555, 1112]
-      ZOrder		      83
       BackgroundColor	      "green"
       InitialCondition	      "pos_ini"
     }
@@ -3380,19 +3307,8 @@ Model {
       Name		      "Mux4"
       SID		      "280"
       Ports		      [2, 1]
-      Position		      [140, 759, 145, 886]
+      Position		      [110, 759, 115, 886]
       ZOrder		      53
-      ShowName		      off
-      Inputs		      "2"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Mux
-      Name		      "Mux6"
-      SID		      "305"
-      Ports		      [2, 1]
-      Position		      [1380, 1032, 1385, 1123]
-      ZOrder		      82
       ShowName		      off
       Inputs		      "2"
       DisplayOption	      "bar"
@@ -3408,16 +3324,6 @@ Model {
       RndMeth		      "Floor"
     }
     Block {
-      BlockType		      Product
-      Name		      "Product1"
-      SID		      "306"
-      Ports		      [2, 1]
-      Position		      [1420, 1056, 1465, 1089]
-      ZOrder		      81
-      Inputs		      "**"
-      RndMeth		      "Floor"
-    }
-    Block {
       BlockType		      SubSystem
       Name		      "Propulsion"
       SID		      "76"
@@ -3429,7 +3335,7 @@ Model {
       Variant		      off
       System {
 	Name			"Propulsion"
-	Location		[1528, 0, 2821, 733]
+	Location		[1528, -7, 2822, 727]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -3859,20 +3765,9 @@ Model {
       ShowName		      off
       IconShape		      "round"
       Inputs		      "|+++"
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum3"
-      SID		      "307"
-      Ports		      [2, 1]
-      Position		      [1175, 1025, 1195, 1045]
-      ZOrder		      80
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|-+"
       Port {
 	PortNumber		1
-	Name			"gama"
+	Name			"delta_deg"
 	RTWStorageClass		"Auto"
 	DataLoggingNameMode	"SignalName"
       }
@@ -3883,20 +3778,6 @@ Model {
       SID		      "98"
       Position		      [990, 620, 1010, 640]
       ZOrder		      -22
-    }
-    Block {
-      BlockType		      Terminator
-      Name		      "Terminator2"
-      SID		      "308"
-      Position		      [1160, 1080, 1180, 1100]
-      ZOrder		      79
-    }
-    Block {
-      BlockType		      Terminator
-      Name		      "Terminator3"
-      SID		      "317"
-      Position		      [1160, 1135, 1180, 1155]
-      ZOrder		      89
     }
     Block {
       BlockType		      ToWorkspace
@@ -3930,35 +3811,6 @@ Model {
       Ports		      [1, 1]
       Position		      [1105, 620, 1135, 650]
       ZOrder		      -25
-      Operator		      "cos"
-      Port {
-	PortNumber		1
-	Name			"cosgama"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Trigonometry
-      Name		      "Trigonometric\nFunction2"
-      SID		      "309"
-      Ports		      [1, 1]
-      Position		      [1285, 1020, 1315, 1050]
-      ZOrder		      78
-      Port {
-	PortNumber		1
-	Name			"singama"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Trigonometry
-      Name		      "Trigonometric\nFunction3"
-      SID		      "310"
-      Ports		      [1, 1]
-      Position		      [1285, 1105, 1315, 1135]
-      ZOrder		      77
       Operator		      "cos"
       Port {
 	PortNumber		1
@@ -4163,7 +4015,7 @@ Model {
       BlockType		      Outport
       Name		      "alfa_deg1"
       SID		      "291"
-      Position		      [1085, 783, 1115, 797]
+      Position		      [1080, 783, 1110, 797]
       ZOrder		      67
       Port		      "18"
       IconDisplay	      "Port number"
@@ -4172,7 +4024,7 @@ Model {
       BlockType		      Outport
       Name		      "teta_deg1"
       SID		      "292"
-      Position		      [1085, 823, 1115, 837]
+      Position		      [1080, 823, 1110, 837]
       ZOrder		      66
       Port		      "19"
       IconDisplay	      "Port number"
@@ -4181,7 +4033,7 @@ Model {
       BlockType		      Outport
       Name		      "q_deg1"
       SID		      "293"
-      Position		      [1085, 863, 1115, 877]
+      Position		      [1080, 863, 1110, 877]
       ZOrder		      65
       Port		      "20"
       IconDisplay	      "Port number"
@@ -4190,27 +4042,9 @@ Model {
       BlockType		      Outport
       Name		      "gama_deg1"
       SID		      "294"
-      Position		      [1085, 898, 1115, 912]
+      Position		      [1080, 898, 1110, 912]
       ZOrder		      64
       Port		      "21"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "h1"
-      SID		      "311"
-      Position		      [1645, 1053, 1675, 1067]
-      ZOrder		      76
-      Port		      "22"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "pN1"
-      SID		      "312"
-      Position		      [1645, 1083, 1675, 1097]
-      ZOrder		      75
-      Port		      "23"
       IconDisplay	      "Port number"
     }
     Line {
@@ -4323,19 +4157,8 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "thrust_equilibre"
       SrcPort		      1
-      Points		      [56, 0]
-      Branch {
-	ZOrder			274
-	Labels			[4, 0]
-	Points			[0, 27; -301, 0; 0, 198]
-	DstBlock		"Mux4"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			273
-	DstBlock		"Propulsion"
-	DstPort			2
-      }
+      DstBlock		      "Propulsion"
+      DstPort		      2
     }
     Line {
       ZOrder		      19
@@ -4673,7 +4496,9 @@ Model {
       DstPort		      3
     }
     Line {
+      Name		      "delta_deg"
       ZOrder		      70
+      Labels		      [0, 0]
       SrcBlock		      "Sum2"
       SrcPort		      1
       Points		      [45, 0]
@@ -4687,7 +4512,8 @@ Model {
 	ZOrder			72
 	Points			[0, 35]
 	Branch {
-	  ZOrder		  276
+	  ZOrder		  201
+	  Labels		  [4, 0]
 	  Points		  [0, 22; -240, 0; 0, 218]
 	  DstBlock		  "Mux4"
 	  DstPort		  1
@@ -4733,11 +4559,29 @@ Model {
       DstPort		      1
     }
     Line {
+      Name		      "alfa"
+      ZOrder		      189
+      Labels		      [0, 0; 5, 0]
+      SrcBlock		      "Demux2"
+      SrcPort		      2
+      Points		      [20, 0; 0, -81; -230, 0; 0, 576]
+      DstBlock		      "Mux4"
+      DstPort		      2
+    }
+    Line {
       ZOrder		      226
       SrcBlock		      "Mux4"
       SrcPort		      1
       DstBlock		      "Add1"
       DstPort		      2
+    }
+    Line {
+      ZOrder		      206
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [39, 0; 0, 55]
+      DstBlock		      "Add1"
+      DstPort		      1
     }
     Line {
       Name		      "delta_u"
@@ -4776,25 +4620,15 @@ Model {
       ZOrder		      213
       SrcBlock		      "Demux5"
       SrcPort		      1
-      Points		      [35, 0; 0, -23]
-      Branch {
-	ZOrder			268
-	Points			[270, 0; 0, 244; 248, 0; 0, 59]
-	DstBlock		"Product1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			266
-	Points			[0, -32]
-	DstBlock		"VT1"
-	DstPort			1
-      }
+      Points		      [63, 0; 0, -55]
+      DstBlock		      "VT1"
+      DstPort		      1
     }
     Line {
       ZOrder		      216
       SrcBlock		      "Demux6"
       SrcPort		      1
-      Points		      [33, 0; 0, -10]
+      Points		      [23, 0; 0, -10]
       DstBlock		      "alfa_deg1"
       DstPort		      1
     }
@@ -4809,7 +4643,7 @@ Model {
       ZOrder		      218
       SrcBlock		      "Demux6"
       SrcPort		      3
-      Points		      [55, 0; 0, 10]
+      Points		      [23, 0; 0, 10]
       DstBlock		      "q_deg1"
       DstPort		      1
     }
@@ -4817,7 +4651,7 @@ Model {
       ZOrder		      219
       SrcBlock		      "Demux6"
       SrcPort		      4
-      Points		      [33, 0; 0, 15]
+      Points		      [23, 0; 0, 15]
       DstBlock		      "gama_deg1"
       DstPort		      1
     }
@@ -4825,142 +4659,7 @@ Model {
       ZOrder		      233
       SrcBlock		      "Demux5"
       SrcPort		      2
-      Points		      [90, 0]
-      Branch {
-	ZOrder			270
-	DstBlock		"\n"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			269
-	DstBlock		"Demux6"
-	DstPort			1
-      }
-    }
-    Line {
-      Name		      "gama"
-      ZOrder		      241
-      Labels		      [0, 0]
-      SrcBlock		      "Sum3"
-      SrcPort		      1
-      Points		      [40, 0]
-      Branch {
-	ZOrder			240
-	DstBlock		"Trigonometric\nFunction2"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			239
-	Points			[0, 85]
-	DstBlock		"Trigonometric\nFunction3"
-	DstPort			1
-      }
-    }
-    Line {
-      Name		      "singama"
-      ZOrder		      242
-      Labels		      [0, 1]
-      SrcBlock		      "Trigonometric\nFunction2"
-      SrcPort		      1
-      Points		      [45, 0]
-      DstBlock		      "Mux6"
-      DstPort		      1
-    }
-    Line {
-      Name		      "cosgama"
-      ZOrder		      243
-      Labels		      [0, 1]
-      SrcBlock		      "Trigonometric\nFunction3"
-      SrcPort		      1
-      Points		      [45, 0]
-      DstBlock		      "Mux6"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      244
-      SrcBlock		      "INTEG_POS1"
-      SrcPort		      1
-      DstBlock		      "Demux8"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      245
-      SrcBlock		      "Demux8"
-      SrcPort		      1
-      DstBlock		      "h1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      246
-      SrcBlock		      "Demux8"
-      SrcPort		      2
-      DstBlock		      "pN1"
-      DstPort		      1
-    }
-    Line {
-      Name		      "q"
-      ZOrder		      247
-      Labels		      [0, 0]
-      SrcBlock		      "Demux7"
-      SrcPort		      3
-      DstBlock		      "Terminator2"
-      DstPort		      1
-    }
-    Line {
-      Name		      "alfa"
-      ZOrder		      248
-      Labels		      [0, 0]
-      SrcBlock		      "Demux7"
-      SrcPort		      1
-      Points		      [0, 5]
-      DstBlock		      "Sum3"
-      DstPort		      1
-    }
-    Line {
-      Name		      "teta"
-      ZOrder		      249
-      Labels		      [0, 0]
-      SrcBlock		      "Demux7"
-      SrcPort		      2
-      DstBlock		      "Sum3"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      250
-      SrcBlock		      "Mux6"
-      SrcPort		      1
-      DstBlock		      "Product1"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      251
-      SrcBlock		      "Product1"
-      SrcPort		      1
-      DstBlock		      "INTEG_POS1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      265
-      SrcBlock		      "\n"
-      SrcPort		      1
-      Points		      [0, 35]
-      DstBlock		      "Demux7"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      271
-      SrcBlock		      "Demux7"
-      SrcPort		      4
-      Points		      [13, 0; 0, 25]
-      DstBlock		      "Terminator3"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      277
-      SrcBlock		      "Constant3"
-      SrcPort		      1
-      Points		      [33, 0; 0, 45]
-      DstBlock		      "Add1"
+      DstBlock		      "Demux6"
       DstPort		      1
     }
     Annotation {
@@ -5022,7 +4721,7 @@ Model {
     Annotation {
       SID		      "142"
       Name		      "Calcul de la position et de l'altitude."
-      Position		      [1252, 648, 1447, 665]
+      Position		      [1237, 647, 1432, 664]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      off
       FixedWidth	      off
@@ -5050,7 +4749,7 @@ Model {
       SID		      "144"
       Name		      "Dans cette simulation, on maintient la \ncommande des moteurs a la valeur d' equilibre.\nSeul, le g"
       "ouvernail de profondeur est activé."
-      Position		      [309, 694, 572, 741]
+      Position		      [109, 664, 372, 711]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      off
       FixedWidth	      off
