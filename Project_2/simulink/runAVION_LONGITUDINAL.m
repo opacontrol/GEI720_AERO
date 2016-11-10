@@ -71,7 +71,7 @@
   figure(4)
   plot(y(:,16)/1000, y(:,15)/1000,'LineWidth',2), grid
   hold on
-  plot(y(:,22)/1000, y(:,23)/1000,'c','LineWidth',2)
+  plot(y(:,23)/1000, y(:,22)/1000,'c','LineWidth',2)
   xlabel('Position horizontale (km)', 'FontWeight', 'bold')
   ylabel('Altitude (km)', 'FontWeight', 'bold')
   title('Altitude en fonction de la position horizontale', 'FontWeight', 'bold')

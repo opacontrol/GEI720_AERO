@@ -95,6 +95,7 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      SignalName	      "alfa_deg"
       Name		      "alfa_deg1"
     }
     Outport {
@@ -123,7 +124,7 @@ Model {
       Name		      "pN1"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.122"
+    ComputedModelVersion    "1.126"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -171,8 +172,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1566.0, 741.0]
-	ZoomFactor		[0.85542891421715661]
-	Offset			[-131.32245944243391, 257.68629766809931]
+	ZoomFactor		[1.0]
+	Offset			[-19.378233168473116, 419.59885026276959]
       }
     }
   }
@@ -182,9 +183,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 09 19:03:34 2016"
-  RTWModifiedTimeStamp	  400618957
-  ModelVersionFormat	  "1.%<AutoIncrement:122>"
+  LastModifiedDate	  "Wed Nov 09 19:53:03 2016"
+  RTWModifiedTimeStamp	  400621799
+  ModelVersionFormat	  "1.%<AutoIncrement:126>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1089,9 +1090,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "86"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "330"
+    SIDHighWatermark	    "335"
     Block {
       BlockType		      SubSystem
       Name		      "AERO"
@@ -1593,7 +1594,7 @@ Model {
       Name		      "Add"
       SID		      "253"
       Ports		      [2, 1]
-      Position		      [230, 792, 260, 823]
+      Position		      [230, 817, 260, 848]
       ZOrder		      26
       Inputs		      "+-"
       InputSameDT	      off
@@ -1608,6 +1609,17 @@ Model {
       Position		      [325, 737, 355, 768]
       ZOrder		      42
       Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Add2"
+      SID		      "331"
+      Ports		      [2, 1]
+      Position		      [850, 762, 880, 793]
+      ZOrder		      58
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -3367,7 +3379,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Propulsion"
-	Location		[1528, -7, 2822, 727]
+	Location		[1358, -78, 2974, 838]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -3761,659 +3773,6 @@ Model {
       }
     }
     Block {
-      BlockType		      SubSystem
-      Name		      "Subsystem5"
-      SID		      "293"
-      Ports		      [5, 5]
-      Position		      [1290, 713, 1335, 867]
-      ZOrder		      44
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
-      RequestExecContextInheritance off
-      MaskHideContents	      off
-      System {
-	Name			"Subsystem5"
-	Location		[1358, -78, 2974, 838]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  SID			  "294"
-	  Position		  [85, 24, 115, 39]
-	  ZOrder		  41
-	  BlockRotation		  270
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "In2"
-	  SID			  "295"
-	  Position		  [85, 73, 115, 87]
-	  ZOrder		  42
-	  Port			  "2"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "In3"
-	  SID			  "296"
-	  Position		  [85, 128, 115, 142]
-	  ZOrder		  43
-	  Port			  "3"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "In4"
-	  SID			  "297"
-	  Position		  [85, 198, 115, 212]
-	  ZOrder		  44
-	  Port			  "4"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "In5"
-	  SID			  "298"
-	  Position		  [85, 278, 115, 292]
-	  ZOrder		  45
-	  Port			  "5"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Subsystem"
-	  SID			  "262"
-	  Ports			  [1, 1]
-	  Position		  [260, 2, 295, 38]
-	  ZOrder		  35
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Subsystem"
-	    Location		    [1358, -78, 2974, 838]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "In1"
-	      SID		      "263"
-	      Position		      [80, 15, 95, 45]
-	      ZOrder		      33
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Sum
-	      Name		      "Add2"
-	      SID		      "258"
-	      Ports		      [2, 1]
-	      Position		      [210, 22, 240, 53]
-	      ZOrder		      31
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "delta_equilibre1"
-	      SID		      "259"
-	      Position		      [20, 170, 60, 190]
-	      ZOrder		      32
-	      NamePlacement	      "alternate"
-	      Value		      "VTe"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Out1"
-	      SID		      "264"
-	      Position		      [420, 33, 450, 47]
-	      ZOrder		      34
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      ZOrder		      182
-	      SrcBlock		      "In1"
-	      SrcPort		      1
-	      Points		      [0, 0]
-	      DstBlock		      "Add2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      181
-	      SrcBlock		      "delta_equilibre1"
-	      SrcPort		      1
-	      Points		      [118, 0; 0, -135]
-	      DstBlock		      "Add2"
-	      DstPort		      2
-	    }
-	    Line {
-	      ZOrder		      183
-	      SrcBlock		      "Add2"
-	      SrcPort		      1
-	      DstBlock		      "Out1"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Subsystem1"
-	  SID			  "265"
-	  Ports			  [1, 1]
-	  Position		  [260, 62, 295, 98]
-	  ZOrder		  36
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Subsystem1"
-	    Location		    [1358, -78, 2974, 838]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "200"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "In1"
-	      SID		      "266"
-	      Position		      [75, 15, 90, 45]
-	      ZOrder		      33
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Sum
-	      Name		      "Add2"
-	      SID		      "267"
-	      Ports		      [2, 1]
-	      Position		      [205, 22, 235, 53]
-	      ZOrder		      31
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "delta_equilibre1"
-	      SID		      "268"
-	      Position		      [20, 85, 60, 105]
-	      ZOrder		      32
-	      NamePlacement	      "alternate"
-	      Value		      "Ye(2)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Out1"
-	      SID		      "269"
-	      Position		      [295, 63, 325, 77]
-	      ZOrder		      34
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "Add2"
-	      SrcPort		      1
-	      Points		      [25, 0; 0, 30]
-	      DstBlock		      "Out1"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      3
-	      SrcBlock		      "In1"
-	      SrcPort		      1
-	      DstBlock		      "Add2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      7
-	      SrcBlock		      "delta_equilibre1"
-	      SrcPort		      1
-	      Points		      [82, 0; 0, -50]
-	      DstBlock		      "Add2"
-	      DstPort		      2
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Subsystem2"
-	  SID			  "270"
-	  Ports			  [1, 1]
-	  Position		  [260, 117, 295, 153]
-	  ZOrder		  37
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Subsystem2"
-	    Location		    [1358, -78, 2974, 838]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "528"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "In1"
-	      SID		      "271"
-	      Position		      [20, 15, 35, 45]
-	      ZOrder		      33
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Sum
-	      Name		      "Add2"
-	      SID		      "272"
-	      Ports		      [2, 1]
-	      Position		      [150, 22, 180, 53]
-	      ZOrder		      31
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "delta_equilibre1"
-	      SID		      "273"
-	      Position		      [20, 110, 60, 130]
-	      ZOrder		      32
-	      NamePlacement	      "alternate"
-	      Value		      "Ye(3)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Out1"
-	      SID		      "274"
-	      Position		      [240, 63, 270, 77]
-	      ZOrder		      34
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "In1"
-	      SrcPort		      1
-	      DstBlock		      "Add2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      3
-	      SrcBlock		      "Add2"
-	      SrcPort		      1
-	      Points		      [25, 0; 0, 30]
-	      DstBlock		      "Out1"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      7
-	      SrcBlock		      "delta_equilibre1"
-	      SrcPort		      1
-	      Points		      [45, 0; 0, -75]
-	      DstBlock		      "Add2"
-	      DstPort		      2
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Subsystem3"
-	  SID			  "275"
-	  Ports			  [1, 1]
-	  Position		  [260, 187, 295, 223]
-	  ZOrder		  38
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Subsystem3"
-	    Location		    [1358, -78, 2974, 838]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "332"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "In1"
-	      SID		      "276"
-	      Position		      [65, 15, 80, 45]
-	      ZOrder		      33
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Sum
-	      Name		      "Add2"
-	      SID		      "277"
-	      Ports		      [2, 1]
-	      Position		      [195, 22, 225, 53]
-	      ZOrder		      31
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "delta_equilibre1"
-	      SID		      "278"
-	      Position		      [20, 125, 60, 145]
-	      ZOrder		      32
-	      NamePlacement	      "alternate"
-	      Value		      "Ye(4)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Out1"
-	      SID		      "279"
-	      Position		      [285, 63, 315, 77]
-	      ZOrder		      34
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "Add2"
-	      SrcPort		      1
-	      Points		      [25, 0; 0, 30]
-	      DstBlock		      "Out1"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      3
-	      SrcBlock		      "In1"
-	      SrcPort		      1
-	      DstBlock		      "Add2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      7
-	      SrcBlock		      "delta_equilibre1"
-	      SrcPort		      1
-	      Points		      [72, 0; 0, -90]
-	      DstBlock		      "Add2"
-	      DstPort		      2
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Subsystem4"
-	  SID			  "285"
-	  Ports			  [1, 1]
-	  Position		  [260, 267, 295, 303]
-	  ZOrder		  40
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Subsystem4"
-	    Location		    [1358, -78, 2974, 838]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "300"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "In1"
-	      SID		      "286"
-	      Position		      [115, 100, 130, 130]
-	      ZOrder		      33
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Sum
-	      Name		      "Add2"
-	      SID		      "287"
-	      Ports		      [2, 1]
-	      Position		      [245, 107, 275, 138]
-	      ZOrder		      31
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Constant
-	      Name		      "delta_equilibre1"
-	      SID		      "288"
-	      Position		      [105, 190, 145, 210]
-	      ZOrder		      32
-	      NamePlacement	      "alternate"
-	      Value		      "Ye(5)"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Out1"
-	      SID		      "289"
-	      Position		      [335, 148, 365, 162]
-	      ZOrder		      34
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "In1"
-	      SrcPort		      1
-	      DstBlock		      "Add2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      3
-	      SrcBlock		      "Add2"
-	      SrcPort		      1
-	      Points		      [25, 0; 0, 30]
-	      DstBlock		      "Out1"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      7
-	      SrcBlock		      "delta_equilibre1"
-	      SrcPort		      1
-	      Points		      [50, 0; 0, -70]
-	      DstBlock		      "Add2"
-	      DstPort		      2
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  SID			  "299"
-	  Position		  [465, 13, 495, 27]
-	  ZOrder		  46
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out2"
-	  SID			  "300"
-	  Position		  [475, 73, 505, 87]
-	  ZOrder		  47
-	  Port			  "2"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out3"
-	  SID			  "301"
-	  Position		  [475, 128, 505, 142]
-	  ZOrder		  48
-	  Port			  "3"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out4"
-	  SID			  "302"
-	  Position		  [475, 198, 505, 212]
-	  ZOrder		  49
-	  Port			  "4"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out5"
-	  SID			  "303"
-	  Position		  [475, 278, 505, 292]
-	  ZOrder		  50
-	  Port			  "5"
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  196
-	  SrcBlock		  "In5"
-	  SrcPort		  1
-	  DstBlock		  "Subsystem4"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  195
-	  SrcBlock		  "In4"
-	  SrcPort		  1
-	  DstBlock		  "Subsystem3"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  193
-	  SrcBlock		  "In2"
-	  SrcPort		  1
-	  DstBlock		  "Subsystem1"
-	  DstPort		  1
-	}
-	Line {
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
-	  ZOrder		  194
-	  SrcBlock		  "In3"
-	  SrcPort		  1
-	  DstBlock		  "Subsystem2"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  192
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  Points		  [0, -9; 145, 0]
-	  DstBlock		  "Subsystem"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  207
-	  SrcBlock		  "Subsystem"
-	  SrcPort		  1
-	  DstBlock		  "Out1"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  211
-	  SrcBlock		  "Subsystem1"
-	  SrcPort		  1
-	  DstBlock		  "Out2"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  212
-	  SrcBlock		  "Subsystem2"
-	  SrcPort		  1
-	  DstBlock		  "Out3"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  213
-	  SrcBlock		  "Subsystem3"
-	  SrcPort		  1
-	  DstBlock		  "Out4"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  214
-	  SrcBlock		  "Subsystem4"
-	  SrcPort		  1
-	  DstBlock		  "Out5"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
       BlockType		      Sum
       Name		      "Sum"
       SID		      "90"
@@ -4497,6 +3856,13 @@ Model {
       ZOrder		      22
     }
     Block {
+      BlockType		      Terminator
+      Name		      "Terminator4"
+      SID		      "335"
+      Position		      [305, 950, 325, 970]
+      ZOrder		      62
+    }
+    Block {
       BlockType		      ToWorkspace
       Name		      "To Workspace"
       SID		      "99"
@@ -4543,7 +3909,6 @@ Model {
       Ports		      [1, 1]
       Position		      [1065, 925, 1095, 955]
       ZOrder		      11
-      Operator		      "cos"
       Port {
 	PortNumber		1
 	Name			"singama"
@@ -4558,6 +3923,7 @@ Model {
       Ports		      [1, 1]
       Position		      [1065, 1010, 1095, 1040]
       ZOrder		      10
+      Operator		      "cos"
       Port {
 	PortNumber		1
 	Name			"cosgama"
@@ -4587,10 +3953,28 @@ Model {
       BlockType		      Constant
       Name		      "delta_equilibre2"
       SID		      "327"
-      Position		      [85, 820, 135, 850]
+      Position		      [90, 825, 140, 855]
       ZOrder		      54
       NamePlacement	      "alternate"
       Value		      "alfae"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "delta_equilibre3"
+      SID		      "332"
+      Position		      [680, 715, 730, 745]
+      ZOrder		      59
+      NamePlacement	      "alternate"
+      Value		      "Ye"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "delta_equilibre4"
+      SID		      "333"
+      Position		      [315, 820, 365, 850]
+      ZOrder		      60
+      NamePlacement	      "alternate"
+      Value		      "0"
     }
     Block {
       BlockType		      Gain
@@ -5364,19 +4748,6 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "state"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
-      ZOrder		      142
-      SrcBlock		      "State-Space"
-      SrcPort		      1
-      Points		      [197, 0; 0, -40]
-      DstBlock		      "Demux5"
-      DstPort		      1
-    }
-    Line {
       Name		      "gama"
       FontName		      "Helvetica"
       FontSize		      9
@@ -5522,17 +4893,9 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "Demux2"
       SrcPort		      2
-      Points		      [37, 0; 0, 233; -15, 0; 0, 32; -93, 0; 0, 175]
+      Points		      [37, 0; 0, 233; -15, 0; 0, 32; -93, 0; 0, 172; 121, 0]
       DstBlock		      "Add"
       DstPort		      1
-    }
-    Line {
-      ZOrder		      193
-      SrcBlock		      "Add"
-      SrcPort		      1
-      Points		      [80, 0; 0, 25]
-      DstBlock		      "Mux5"
-      DstPort		      2
     }
     Line {
       ZOrder		      197
@@ -5552,39 +4915,18 @@ Model {
     }
     Line {
       Name		      "alfa_deg"
-      ZOrder		      200
+      ZOrder		      258
       Labels		      [0, 0; 1, 0]
       SrcBlock		      "Demux6"
       SrcPort		      1
-      DstBlock		      "Subsystem5"
-      DstPort		      2
+      DstBlock		      "alfa_deg1"
+      DstPort		      1
     }
     Line {
-      ZOrder		      201
-      SrcBlock		      "Demux6"
-      SrcPort		      2
-      DstBlock		      "Subsystem5"
-      DstPort		      3
-    }
-    Line {
-      ZOrder		      202
-      SrcBlock		      "Demux6"
-      SrcPort		      3
-      DstBlock		      "Subsystem5"
-      DstPort		      4
-    }
-    Line {
-      ZOrder		      203
-      SrcBlock		      "Demux6"
-      SrcPort		      4
-      DstBlock		      "Subsystem5"
-      DstPort		      5
-    }
-    Line {
-      ZOrder		      204
-      SrcBlock		      "Subsystem5"
+      ZOrder		      257
+      SrcBlock		      "Demux5"
       SrcPort		      1
-      Points		      [18, 0]
+      Points		      [65, 0; 0, -20; 303, 0]
       Branch {
 	ZOrder			237
 	Points			[0, 240]
@@ -5598,30 +4940,23 @@ Model {
       }
     }
     Line {
-      ZOrder		      205
-      SrcBlock		      "Subsystem5"
+      ZOrder		      259
+      SrcBlock		      "Demux6"
       SrcPort		      2
-      DstBlock		      "alfa_deg1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      206
-      SrcBlock		      "Subsystem5"
-      SrcPort		      3
       DstBlock		      "teta_deg1"
       DstPort		      1
     }
     Line {
-      ZOrder		      207
-      SrcBlock		      "Subsystem5"
-      SrcPort		      4
+      ZOrder		      260
+      SrcBlock		      "Demux6"
+      SrcPort		      3
       DstBlock		      "q_deg1"
       DstPort		      1
     }
     Line {
-      ZOrder		      208
-      SrcBlock		      "Subsystem5"
-      SrcPort		      5
+      ZOrder		      261
+      SrcBlock		      "Demux6"
+      SrcPort		      4
       DstBlock		      "gama_deg1"
       DstPort		      1
     }
@@ -5630,14 +4965,6 @@ Model {
       SrcBlock		      "Product1"
       SrcPort		      1
       DstBlock		      "INTEG_POS1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      246
-      SrcBlock		      "Demux5"
-      SrcPort		      1
-      Points		      [65, 0; 0, -20]
-      DstBlock		      "Subsystem5"
       DstPort		      1
     }
     Line {
@@ -5652,26 +4979,8 @@ Model {
       ZOrder		      249
       SrcBlock		      "delta_equilibre2"
       SrcPort		      1
-      Points		      [42, 0; 0, -20]
       DstBlock		      "Add"
       DstPort		      2
-    }
-    Line {
-      ZOrder		      85
-      SrcBlock		      "Demux5"
-      SrcPort		      2
-      Points		      [10, 0]
-      Branch {
-	ZOrder			244
-	DstBlock		"Demux6"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			239
-	Points			[0, 63; -160, 0]
-	DstBlock		"rad2deg2"
-	DstPort			1
-      }
     }
     Line {
       ZOrder		      255
@@ -5686,6 +4995,63 @@ Model {
       SrcPort		      1
       Points		      [0, 40]
       DstBlock		      "Demux7"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      262
+      SrcBlock		      "Add2"
+      SrcPort		      1
+      DstBlock		      "Demux5"
+      DstPort		      1
+    }
+    Line {
+      Name		      "state"
+      ZOrder		      263
+      Labels		      [0, 0]
+      SrcBlock		      "State-Space"
+      SrcPort		      1
+      Points		      [132, 0; 0, -35]
+      DstBlock		      "Add2"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      264
+      SrcBlock		      "delta_equilibre3"
+      SrcPort		      1
+      Points		      [92, 0; 0, 40]
+      DstBlock		      "Add2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      265
+      SrcBlock		      "delta_equilibre4"
+      SrcPort		      1
+      DstBlock		      "Mux5"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      85
+      SrcBlock		      "Demux5"
+      SrcPort		      2
+      Points		      [10, 0]
+      Branch {
+	ZOrder			268
+	DstBlock		"Demux6"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			239
+	Points			[0, 63; -160, 0]
+	DstBlock		"rad2deg2"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      267
+      SrcBlock		      "Add"
+      SrcPort		      1
+      Points		      [17, 0; 0, 125]
+      DstBlock		      "Terminator4"
       DstPort		      1
     }
     Annotation {
