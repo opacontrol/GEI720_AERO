@@ -114,4 +114,6 @@ etat_ini = etat_equil;
 
 % Calculer le modele lineaire
 [A, B, C, D] = linmod('AVION_TRIM', Xe, Ue);
-vp = eig(A);
+vp = eig(A)
+Wa = imag(vp)
+
