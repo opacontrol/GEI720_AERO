@@ -1,15 +1,25 @@
 Model {
-  Name			  "AVION_LONGITUDINAL"
+  Name			  "AVION_CONTROL"
   Version		  8.2
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
-    NumRootOutports	    16
+    NumRootOutports	    32
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
+    }
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
       Name		      "VT"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -20,7 +30,17 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      Name		      ""
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
       Name		      "teta_deg"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -30,7 +50,17 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      Name		      ""
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
       Name		      "gama_deg"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -40,7 +70,17 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      Name		      ""
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
       Name		      "L_aero"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -50,7 +90,17 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      Name		      ""
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
       Name		      "F_thrust"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -60,7 +110,17 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      Name		      ""
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
       Name		      "VT_dot"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -70,7 +130,17 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      Name		      ""
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
       Name		      "teta_dot"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -80,7 +150,17 @@ Model {
     Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      Name		      ""
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
       Name		      "h"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      ""
     }
     Outport {
       BusObject		      ""
@@ -88,7 +168,7 @@ Model {
       Name		      "pN"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.133"
+    ComputedModelVersion    "1.134"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -136,8 +216,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1246.0, 553.0]
-	ZoomFactor		[0.5]
-	Offset			[-714.77153231557224, 155.92091410413377]
+	ZoomFactor		[1.0]
+	Offset			[289.02846768442828, 186.92091410413377]
       }
     }
   }
@@ -147,9 +227,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 17 14:55:17 2016"
-  RTWModifiedTimeStamp	  401295315
-  ModelVersionFormat	  "1.%<AutoIncrement:133>"
+  LastModifiedDate	  "Thu Nov 17 14:58:58 2016"
+  RTWModifiedTimeStamp	  401295424
+  ModelVersionFormat	  "1.%<AutoIncrement:134>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -191,11 +271,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "AVION_LONGITUDINAL"
+    model_		    "AVION_CONTROL"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "AVION_LONGITUDINAL"
+      Cell		      "AVION_CONTROL"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1030,7 +1110,7 @@ Model {
     }
   }
   System {
-    Name		    "AVION_LONGITUDINAL"
+    Name		    "AVION_CONTROL"
     Location		    [0, 0, 1296, 728]
     Open		    on
     ModelBrowserVisibility  off
@@ -1043,7 +1123,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "50"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "339"
     Block {
@@ -3700,6 +3780,7 @@ Model {
       SID		      "110"
       Position		      [1360, 353, 1390, 367]
       ZOrder		      -29
+      Port		      "2"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3708,7 +3789,7 @@ Model {
       SID		      "111"
       Position		      [1360, 388, 1390, 402]
       ZOrder		      -30
-      Port		      "2"
+      Port		      "4"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3717,7 +3798,7 @@ Model {
       SID		      "112"
       Position		      [1360, 428, 1390, 442]
       ZOrder		      -31
-      Port		      "3"
+      Port		      "6"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3726,7 +3807,7 @@ Model {
       SID		      "113"
       Position		      [1360, 468, 1390, 482]
       ZOrder		      -32
-      Port		      "4"
+      Port		      "8"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3735,7 +3816,7 @@ Model {
       SID		      "114"
       Position		      [1360, 503, 1390, 517]
       ZOrder		      -33
-      Port		      "5"
+      Port		      "10"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3745,7 +3826,7 @@ Model {
       Position		      [505, 348, 535, 362]
       ZOrder		      -34
       NamePlacement	      "alternate"
-      Port		      "6"
+      Port		      "12"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3754,7 +3835,7 @@ Model {
       SID		      "116"
       Position		      [505, 413, 535, 427]
       ZOrder		      -35
-      Port		      "7"
+      Port		      "14"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3764,7 +3845,7 @@ Model {
       Position		      [505, 478, 535, 492]
       ZOrder		      -36
       NamePlacement	      "alternate"
-      Port		      "8"
+      Port		      "16"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3773,7 +3854,7 @@ Model {
       SID		      "118"
       Position		      [665, 543, 695, 557]
       ZOrder		      -37
-      Port		      "9"
+      Port		      "18"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3783,7 +3864,7 @@ Model {
       Position		      [660, 688, 690, 702]
       ZOrder		      -38
       NamePlacement	      "alternate"
-      Port		      "10"
+      Port		      "20"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3793,7 +3874,7 @@ Model {
       Position		      [840, 553, 870, 567]
       ZOrder		      -39
       NamePlacement	      "alternate"
-      Port		      "11"
+      Port		      "22"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3803,7 +3884,7 @@ Model {
       Position		      [840, 588, 870, 602]
       ZOrder		      -40
       NamePlacement	      "alternate"
-      Port		      "12"
+      Port		      "24"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3813,7 +3894,7 @@ Model {
       Position		      [840, 623, 870, 637]
       ZOrder		      -41
       NamePlacement	      "alternate"
-      Port		      "13"
+      Port		      "26"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3823,7 +3904,7 @@ Model {
       Position		      [840, 658, 870, 672]
       ZOrder		      -42
       NamePlacement	      "alternate"
-      Port		      "14"
+      Port		      "28"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3832,7 +3913,7 @@ Model {
       SID		      "124"
       Position		      [1465, 588, 1495, 602]
       ZOrder		      -43
-      Port		      "15"
+      Port		      "30"
       IconDisplay	      "Port number"
     }
     Block {
@@ -3841,7 +3922,7 @@ Model {
       SID		      "125"
       Position		      [1465, 618, 1495, 632]
       ZOrder		      -44
-      Port		      "16"
+      Port		      "32"
       IconDisplay	      "Port number"
     }
     Line {

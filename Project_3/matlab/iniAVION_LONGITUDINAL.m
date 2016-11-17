@@ -84,7 +84,7 @@
 %   ae     = 0.63467;     % propulsion à l'équilibre
 X0  = [80, 0, 0, 0]'; IX  = [1];
 U0  = []; IU  = [];
-Y0  = [0, 0, 0, 0, 1]'; IY  = [5];
+Y0  = [0, 0, 0, 0, 0]'; IY  = [5];
 DX0 = []; IDX = [];  %% Always empty vector
 
 tolerance = 1E-08;
@@ -110,10 +110,64 @@ etat_equil = [VTe, alfae, tetae, qe]; % conditions d'equilibre
 % On choisit la dynamique initiale a l'equilibre (pas tjrs le cas). 
 % Voir le bloc INTEG_DYN du modele Simulink ou elles apparaissent.
 
-etat_ini = etat_equil;
+etat_ini = [85, alfae, tetae, qe];
 
 % Calculer le modele lineaire
 [A, B, C, D] = linmod('AVION_TRIM', Xe, Ue);
 vp = eig(A)
 Wa = imag(vp)
 
+
+%% Projet 3 : 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Partie A du projet: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Question P3-1
+% calcul des poles desiree selon
+Ts = 8;
+Zeta = sqrt(2)/2;
+Wn = 4/(Zeta*Ts);
+Poled_1 = -Zeta*Wn + Wn*sqrt(1-(Zeta^2))*i;
+Poled_2 = -Zeta*Wn - Wn*sqrt(1-(Zeta^2))*i;
+Facteur_pole = 1/2;
+Wn2 = 4/(Zeta*Ts*Facteur_pole);
+Poled_3 = -Zeta*Wn2 + Wn2*sqrt(1-(Zeta^2))*i;
+Poled_4 = -Zeta*Wn2 - Wn2*sqrt(1-(Zeta^2))*i;
+Poled = [Poled_1, Poled_2, Poled_3,Poled_4];
+
+% Question P3-2
+% COMMANDABILITÉ PAR RETOUR D’ÉTAT 
+% Methode 1 :
+M = ctrb(A,B);
+M = rank (M);
+disp(['Le rang de la matrice M = ' num2str(M)]);
+disp(['La dimention de la matrice A = ' num2str(length(A))]);
+%Methode 2 :
+[P,V]=eig(A);
+M2 = inv(P)*B;
+disp('Aucune range de inv(P) * B est nulle ');
+disp(M2)
+%Methode 3 : Vérification s'il y a annulation pôle-zéro
+Bdelta = B(:,1); 
+Ddelta = D(:,1)
+[num,den] = ss2tf(A, Bdelta, C, Ddelta);
+
+[r c] = size(num);
+  for i = 1:r
+    Zero = roots(num(i,:));
+  end
+ Zero
+ Pole = roots(den)
+ disp('Tous les pôles sont différents des zéros:')
+ disp('Resultat : complètement commandable')
+  
+% Question P3-4 : 
+% Calcul de la matrice de gain K
+K = place(A,Bdelta,Poled);
+disp('Matrice K pour les poles desirees choisis ')
+disp(K)
+% dans mon cas a moi ca marche pas 
+disp('Verification que mon calcul marche eig(A-B*K)= P')
+dum1=eig(A-Bdelta*K)
+disp(P);
+disp(dum1);
