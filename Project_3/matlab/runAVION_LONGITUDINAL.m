@@ -24,8 +24,8 @@
 % le modele 'AVION_LONGITUDINAL'. Il y a une rangee pour chaque
 % valeur de temps dans 't'.
 
-  [tsim,x,y]         = sim('AVION_LONGITUDINAL2',t);
- % [tsim2,x2,y2]         = sim('AVION_CONTROL',t);
+  %[tsim,x,y]         = sim('AVION_LONGITUDINAL2',t);
+  [tsim2,x2,y2]         = sim('AVION_CONTROL',t);
 
 
   
@@ -88,7 +88,7 @@
   hold on
   plot(t, [y(:,20)],'--','LineWidth',2)
   V = axis;
-  axis([495, 540, V(3), V(4)])
+  axis([0, 540, V(3), V(4)])
   xlabel('Temps (s)', 'FontWeight', 'bold')
   ylabel('Vitesse angulaire en tangage (deg/s)', 'FontWeight', 'bold')
   title('Zoom pour illustrer le mode ''short period'' (2s) et le mode phugoid (22s)', 'FontWeight', 'bold')
