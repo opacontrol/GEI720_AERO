@@ -12,7 +12,7 @@
   iniAVION_LONGITUDINAL
 
 %initialisation des poles desire  
-  Poles_d
+  %Poles_d
 
 % Definition de la matrice-colonne temps
 
