@@ -185,7 +185,7 @@ Pe = Poled * Facteur_Pe;
 %P3-8 : Calcul de la matrice Ke
 CC = [0 0 0 1];
 Cobs = eye(4);
-Ke = place(A',CC',Pe')';
+Ke = place(A',Cobs,Pe')';
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % a verifier la matrice C qu'on doit prendre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,15 +193,15 @@ Ke = place(A',CC',Pe')';
 disp('Matrice Ke pour les poles desirees choisis ')
 disp(Ke)
 disp('Verification que mon calcul marche eig(A-Ke*)= P')
-dum1=eig(A-Ke*CC);
+dum1=eig(A-Ke*Cobs);
 disp(Pe');
 disp(dum1);
 
 %P3-9 : 
 
-Aobs = A - Ke*CC;
-Bobs = [B(:,1) Ke];
-Dobs = [0 0 0 0; 0 0 0 0]';
+Aobs = A - Ke;
+Bobs = [ B Ke];
+
 
 
 

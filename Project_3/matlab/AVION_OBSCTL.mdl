@@ -1,5 +1,5 @@
 Model {
-  Name			  "AVION_OBSERV"
+  Name			  "AVION_OBSCTL"
   Version		  8.2
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
@@ -124,7 +124,7 @@ Model {
       Name		      "pN1"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.152"
+    ComputedModelVersion    "1.158"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -172,8 +172,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1332.0, 569.0]
-	ZoomFactor		[0.8]
-	Offset			[73.992411929106993, 501.04224687730448]
+	ZoomFactor		[1.0]
+	Offset			[78.57574526244025, 433.542246877304]
       }
     }
   }
@@ -183,9 +183,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 24 16:55:31 2016"
-  RTWModifiedTimeStamp	  401907330
-  ModelVersionFormat	  "1.%<AutoIncrement:152>"
+  LastModifiedDate	  "Thu Nov 24 17:11:26 2016"
+  RTWModifiedTimeStamp	  401908285
+  ModelVersionFormat	  "1.%<AutoIncrement:158>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -227,11 +227,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "AVION_OBSERV"
+    model_		    "AVION_OBSCTL"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "AVION_OBSERV"
+      Cell		      "AVION_OBSCTL"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -994,6 +994,14 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      RandomNumber
+      Mean		      "0"
+      Variance		      "1"
+      Seed		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
       BlockType		      StateSpace
       A			      "1"
       B			      "1"
@@ -1058,7 +1066,7 @@ Model {
     }
   }
   System {
-    Name		    "AVION_OBSERV"
+    Name		    "AVION_OBSCTL"
     Location		    [-8, -8, 1374, 736]
     Open		    on
     ModelBrowserVisibility  off
@@ -1071,9 +1079,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "80"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "525"
+    SIDHighWatermark	    "530"
     Block {
       BlockType		      SubSystem
       Name		      "AERO"
@@ -1586,6 +1594,16 @@ Model {
       SID		      "524"
       Position		      [840, 970, 870, 1000]
       ZOrder		      138
+      Value		      "Xe"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      SID		      "528"
+      Position		      [745, 1105, 775, 1135]
+      ZOrder		      142
+      BlockMirror	      on
+      NamePlacement	      "alternate"
       Value		      "Xe"
     }
     Block {
@@ -3687,6 +3705,14 @@ Model {
       }
     }
     Block {
+      BlockType		      RandomNumber
+      Name		      "Random\nNumber"
+      SID		      "530"
+      Position		      [290, 1035, 320, 1065]
+      ZOrder		      144
+      Variance		      "(1E-3)^2"
+    }
+    Block {
       BlockType		      StateSpace
       Name		      "State-Space"
       SID		      "498"
@@ -3794,6 +3820,18 @@ Model {
       Position		      [935, 867, 960, 898]
       ZOrder		      137
       ShowName		      off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum8"
+      SID		      "526"
+      Ports		      [2, 1]
+      Position		      [665, 1052, 690, 1083]
+      ZOrder		      140
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Inputs		      "+-"
     }
     Block {
       BlockType		      Terminator
@@ -3917,6 +3955,30 @@ Model {
       BackgroundColor	      "green"
       NamePlacement	      "alternate"
       Gain		      "-K"
+      Multiplication	      "Matrix(K*u)"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "rad2deg3"
+      SID		      "527"
+      Position		      [480, 1038, 545, 1102]
+      ZOrder		      141
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Gain		      "-K"
+      Multiplication	      "Matrix(K*u)"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "rad2deg4"
+      SID		      "529"
+      Position		      [1135, 1188, 1200, 1252]
+      ZOrder		      143
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Gain		      "d2r_cst"
       Multiplication	      "Matrix(K*u)"
     }
     Block {
@@ -4515,15 +4577,15 @@ Model {
       Labels		      [0, 1]
       SrcBlock		      "Demux2"
       SrcPort		      4
-      Points		      [28, 0]
+      Points		      [61, 0]
       Branch {
-	ZOrder			431
-	Points			[0, 420]
+	ZOrder			536
+	Points			[0, 270; 219, 0; 0, 150]
 	DstBlock		"Sum3"
 	DstPort			1
       }
       Branch {
-	ZOrder			430
+	ZOrder			535
 	DstBlock		"AERO"
 	DstPort			4
       }
@@ -4744,17 +4806,6 @@ Model {
       FontSize		      9
       FontWeight	      "normal"
       FontAngle		      "normal"
-      ZOrder		      449
-      SrcBlock		      "Demux6"
-      SrcPort		      3
-      DstBlock		      "q_deg1"
-      DstPort		      1
-    }
-    Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      450
       SrcBlock		      "Sum4"
       SrcPort		      1
@@ -4948,9 +4999,19 @@ Model {
       ZOrder		      512
       SrcBlock		      "Sum7"
       SrcPort		      1
-      Points		      [20, 0; 0, -10]
-      DstBlock		      "Demux5"
-      DstPort		      1
+      Points		      [18, 0]
+      Branch {
+	ZOrder			526
+	Points			[0, 76; -70, 0; 0, 99]
+	DstBlock		"Sum8"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			525
+	Points			[2, 0; 0, -10]
+	DstBlock		"Demux5"
+	DstPort			1
+      }
     }
     Line {
       ZOrder		      513
@@ -4981,6 +5042,54 @@ Model {
       SrcPort		      1
       DstBlock		      "Mux4"
       DstPort		      2
+    }
+    Line {
+      ZOrder		      524
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      Points		      [-24, 0; 0, -45]
+      DstBlock		      "Sum8"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      527
+      SrcBlock		      "Sum8"
+      SrcPort		      1
+      DstBlock		      "rad2deg3"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      528
+      SrcBlock		      "rad2deg3"
+      SrcPort		      1
+      Points		      [-9, 0; 0, -225]
+      DstBlock		      "Mux4"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      449
+      SrcBlock		      "Demux6"
+      SrcPort		      3
+      Points		      [109, 0]
+      Branch {
+	ZOrder			531
+	Points			[0, -14; 280, 0; 0, 289]
+	DstBlock		"rad2deg4"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			530
+	DstBlock		"q_deg1"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      534
+      SrcBlock		      "Random\nNumber"
+      SrcPort		      1
+      Points		      [68, 0; 0, -120]
+      DstBlock		      "Sum3"
+      DstPort		      3
     }
   }
 }
