@@ -88,7 +88,7 @@ Model {
       Name		      "pN"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.133"
+    ComputedModelVersion    "1.134"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -136,8 +136,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1246.0, 553.0]
-	ZoomFactor		[0.5]
-	Offset			[-714.77153231557224, 155.92091410413377]
+	ZoomFactor		[0.81546572934973638]
+	Offset			[-4.7931034482758612, 68.4299568965517]
       }
     }
   }
@@ -147,9 +147,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 17 14:55:17 2016"
-  RTWModifiedTimeStamp	  401295315
-  ModelVersionFormat	  "1.%<AutoIncrement:133>"
+  LastModifiedDate	  "Thu Nov 24 10:37:12 2016"
+  RTWModifiedTimeStamp	  401884617
+  ModelVersionFormat	  "1.%<AutoIncrement:134>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1043,7 +1043,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "50"
+    ZoomFactor		    "82"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "339"
     Block {
@@ -4359,7 +4359,7 @@ Model {
       Name		      "Dans cette simulation, on commande l'angle du gouvernail \nde profondeur a sa valeur a l'equilibre "
       "jusqu'a t = 500 s. A ce \ntemps, on applique une variation de l'angle d'attaque \npar une valeur negative (0.5 d"
       "eg) de l'angle du gouvernail\nde profondeur, pendant 1400 s."
-      Position		      [45, 147, 371, 224]
+      Position		      [60, 222, 386, 299]
       AutoSize		      on
       WordWrap		      off
       HorizontalAlignment     "left"
@@ -4385,7 +4385,7 @@ Model {
       Name		      "Les variables d'etat dynamique sont:\n\nVT   : vitesse 'totale' de l'avion\nalfa : angle d'attaque\n"
       "teta : angle de tangage (pitch)\nq    : derivee de teta (pitch rate)\n\nLes variables d'etat cinematique sont:\n"
       "\nh    : altitude\npN   : position horizontale de l'avion."
-      Position		      [640, 16, 843, 183]
+      Position		      [640, 191, 843, 358]
       AutoSize		      on
       WordWrap		      off
       HorizontalAlignment     "left"
@@ -4422,7 +4422,7 @@ Model {
       SID		      "143"
       Name		      "Le sous-systeme AERO calcule les forces et couples\naerodynamiques. Le sous-systeme PROPULSION calc"
       "ule\nles forces et couples de propulsion. Le sous-systeme\nDYN calcule les derivees des 4 variables d'etat."
-      Position		      [888, 169, 1204, 231]
+      Position		      [868, 244, 1184, 306]
       AutoSize		      on
       WordWrap		      off
       HorizontalAlignment     "left"
