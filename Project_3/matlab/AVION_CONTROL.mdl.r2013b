@@ -1,5 +1,5 @@
 Model {
-  Name			  "AVION_LONGITUDINAL2"
+  Name			  "AVION_CONTROL"
   Version		  8.2
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
@@ -228,7 +228,7 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 24 12:07:34 2016"
+  LastModifiedDate	  "Thu Nov 24 12:08:00 2016"
   RTWModifiedTimeStamp	  401890052
   ModelVersionFormat	  "1.%<AutoIncrement:142>"
   ConfigurationManager	  "none"
@@ -272,11 +272,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "AVION_LONGITUDINAL2"
+    model_		    "AVION_CONTROL"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "AVION_LONGITUDINAL2"
+      Cell		      "AVION_CONTROL"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1102,7 +1102,7 @@ Model {
     }
   }
   System {
-    Name		    "AVION_LONGITUDINAL2"
+    Name		    "AVION_CONTROL"
     Location		    [-8, -8, 1374, 736]
     Open		    on
     ModelBrowserVisibility  off

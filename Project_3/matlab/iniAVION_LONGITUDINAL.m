@@ -114,8 +114,8 @@ etat_ini = [85, alfae, tetae, qe];
 
 % Calculer le modele lineaire
 [A, B, C, D] = linmod('AVION_TRIM', Xe, Ue);
-vp = eig(A)
-Wa = imag(vp)
+vp = eig(A);
+Wa = imag(vp);
 
 
 %% Projet 3 :
@@ -152,7 +152,7 @@ disp(M2);
 
 %Methode 3 : Vérification s'il y a annulation pôle-zéro
 Bdelta = B(:,1);
-Ddelta = D(:,1)
+Ddelta = D(:,1);
 [num,den] = ss2tf(A, Bdelta, C, Ddelta);
 
 [r, c] = size(num);
@@ -170,42 +170,44 @@ K = place(A,Bdelta,Poled);
 disp('Matrice K pour les poles desirees choisis ')
 disp(K)
 disp('Verification que mon calcul marche eig(A-B*K)= P')
-dum1=eig(A-Bdelta*K);
+tmp=eig(A-Bdelta*K);
 disp(Poled);
-disp(dum1);
+disp(tmp);
 
-%% partie B 
+%% partie B
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Partie B du projet:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %P3-6 : Donner et justifier le choix des pôles de l’observateur Pe.
+% On choisit de placer les poles de l'observateur a un facteur 2 des poles
+% du regulateur.
 Facteur_Pe = 2;
 Pe = Poled * Facteur_Pe;
 
 %P3-8 : Calcul de la matrice Ke
 CC = [0 0 0 1];
-Cobs = eye(4);
 Ke = place(A',CC',Pe')';
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% a verifier la matrice C qu'on doit prendre
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Ke = place(A',C(1,:)',Pe)';
 disp('Matrice Ke pour les poles desirees choisis ')
 disp(Ke)
 disp('Verification que mon calcul marche eig(A-Ke*)= P')
-dum1=eig(A-Ke*CC);
+tmp=eig(A-Ke*CC);
 disp(Pe');
-disp(dum1);
+disp(tmp);
 
-%P3-9 : 
-
+%P3-9:
 Aobs = A - Ke*CC;
 Bobs = [B(:,1) Ke];
+Cobs = eye(4);
 Dobs = [0 0 0 0; 0 0 0 0]';
 
+%% Figures
+SHOW_FIGURE = 0;
+if SHOW_FIGURE
 
+    figure;
+    hold on;
+    plot(Poled, 'bo', 'LineWidth', 2);
+    plot(Pe,    'ro', 'LineWidth', 2);
+    legend('Regulateur', 'Observateur');
 
-
-
-
-
+end

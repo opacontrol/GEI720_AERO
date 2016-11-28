@@ -1,179 +1,158 @@
 Model {
   Name			  "AVION_CONTROL"
-  Version		  8.2
-  MdlSubVersion		  0
+  Version		  8.7
+  MdlSubVersion		  1
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
-    NumRootOutports	    32
+    NumRootOutports	    23
     Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
       Name		      "VT"
-    }
-    Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
-      SignalName	      "alfa_deg"
+      UnitExpr		      "inherit"
+    }
+    Outport {
       Name		      "alfa_deg"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "teta_deg"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "q_deg"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "gama_deg"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "D_aero"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "L_aero"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "M_aero"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "F_thrust"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "M_thrust"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "VT_dot"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "alfa_dot"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "teta_dot"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "q_dot"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "h"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "pN"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "VT1"
-    }
-    Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
       SignalName	      "alfa_deg"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "teta_deg"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "q_deg"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "gama_deg"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "D_aero"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "L_aero"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "M_aero"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "F_thrust"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "M_thrust"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "VT_dot"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "alfa_dot"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "teta_dot"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "q_dot"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "h"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "pN"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "VT1"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
       Name		      "alfa_deg1"
-    }
-    Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      SignalName	      "alfa_deg"
+      UnitExpr		      "inherit"
+    }
+    Outport {
       Name		      "teta_deg1"
-    }
-    Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
       Name		      "q_deg1"
-    }
-    Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
       Name		      "gama_deg1"
-    }
-    Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
-      Name		      "D_aero1"
+      UnitExpr		      "inherit"
     }
     Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "L_aero1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "M_aero1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "F_thrust1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "M_thrust1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "VT_dot1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "alfa_dot1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "teta_dot1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
-      Name		      "q_dot1"
-    }
-    Outport {
-      BusObject		      ""
-      BusOutputAsStruct	      "off"
       Name		      "h1"
-    }
-    Outport {
       BusObject		      ""
       BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
       Name		      "pN1"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.142"
+    ComputedModelVersion    "1.143"
     NumModelReferences	    0
     NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
   }
-  SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
@@ -183,6 +162,7 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
+  LastSavedArchitecture	  "win64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -192,7 +172,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1382.0, 744.0]
+      Location		      [1528.0, -7.0, 1358.0, 854.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -216,9 +196,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1332.0, 569.0]
-	ZoomFactor		[0.4]
-	Offset			[-945.5611136783732, 334.51202164196468]
+	Extents			[1639.0, 859.0]
+	ZoomFactor		[0.70457460453185128]
+	Offset			[-21.82340535680553, 335.14957311747457]
       }
     }
   }
@@ -226,11 +206,11 @@ Model {
   Creator		  "delafontaine"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Ouss"
+  LastModifiedBy	  "deemm"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 24 12:08:00 2016"
-  RTWModifiedTimeStamp	  401890052
-  ModelVersionFormat	  "1.%<AutoIncrement:142>"
+  LastModifiedDate	  "Mon Nov 28 11:55:45 2016"
+  RTWModifiedTimeStamp	  402234928
+  ModelVersionFormat	  "1.%<AutoIncrement:143>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -238,6 +218,10 @@ Model {
   WideLines		  off
   ShowLineDimensions	  on
   ShowPortDataTypes	  off
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
   ShowDesignRanges	  off
   ShowLoopsOnError	  on
   IgnoreBidirectionalLines off
@@ -246,14 +230,18 @@ Model {
   ShowSignalResolutionIcons on
   ShowViewerIcons	  on
   SortedOrder		  off
+  VariantCondition	  off
   ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
+  ShowVisualizeInsertedRTB on
+  ShowMarkup		  on
   BlockNameDataTip	  off
   BlockParametersDataTip  off
   BlockDescriptionStringDataTip	off
   ToolBar		  on
   StatusBar		  on
   BrowserShowLibraryLinks off
+  FunctionConnectors	  off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
   PauseTimes		  "5"
@@ -286,21 +274,6 @@ Model {
       PropName		      "logAsSpecifiedByModelsSSIDs_"
     }
   }
-  RecordCoverage	  off
-  CovPath		  "/"
-  CovSaveName		  "covdata"
-  CovMetricSettings	  "dw"
-  CovNameIncrementing	  off
-  CovHtmlReporting	  on
-  CovForceBlockReductionOff on
-  CovEnableCumulative	  on
-  covSaveCumulativeToWorkspaceVar on
-  CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName	  "covCumulativeData"
-  CovCumulativeReport	  off
-  CovReportOnPause	  on
-  CovModelRefEnable	  "Off"
-  CovExternalEMLEnable	  off
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -322,7 +295,6 @@ Model {
   ExtModeSkipDownloadWhenConnect off
   ExtModeLogAll		  on
   ExtModeAutoUpdateStatusClock on
-  BufferReuse		  on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
   Array {
@@ -330,13 +302,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      7
-      Version		      "1.13.1"
+      Version		      "1.16.2"
       Array {
 	Type			"Handle"
-	Dimension		8
+	Dimension		9
 	Simulink.SolverCC {
 	  $ObjectID		  8
-	  Version		  "1.13.1"
+	  Version		  "1.16.2"
 	  StartTime		  "0.0"
 	  StopTime		  "100"
 	  AbsTol		  "auto"
@@ -363,6 +335,8 @@ Model {
 	  ZeroCrossControl	  "UseLocalSettings"
 	  ZeroCrossAlgorithm	  "Nonadaptive"
 	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverInfoToggleStatus  off
+	  IsAutoAppliedInSIP	  off
 	  SolverResetMethod	  "Fast"
 	  PositivePriorityOrder	  off
 	  AutoInsertRateTranBlk	  off
@@ -371,7 +345,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  9
-	  Version		  "1.13.1"
+	  Version		  "1.16.2"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -389,6 +363,9 @@ Model {
 	  SignalLogging		  on
 	  DSMLogging		  on
 	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  StreamToWorkspace	  off
+	  StreamVariableName	  "streamout"
 	  SaveTime		  on
 	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
@@ -400,10 +377,13 @@ Model {
 	  OutputTimes		  "[]"
 	  ReturnWorkspaceOutputsName "out"
 	  Refine		  "1"
+	  LoggingToFile		  off
+	  LoggingFileName	  "out.mat"
+	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  10
-	  Version		  "1.13.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -420,8 +400,8 @@ Model {
 	  BlockReduction	  on
 	  BooleanDataType	  off
 	  ConditionallyExecuteInputs on
-	  InlineParams		  off
-	  UseIntDivNetSlope	  off
+	  DefaultParameterBehavior "Tunable"
+	  UseDivisionForNetSlopeComputation "off"
 	  UseFloatMulNetSlope	  off
 	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
@@ -429,6 +409,8 @@ Model {
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
 	  StrengthReduction	  off
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
@@ -436,15 +418,13 @@ Model {
 	  EnableMemcpy		  on
 	  MemcpyThreshold	  64
 	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsThreshold 12
 	  ExpressionDepthLimit	  2147483647
-	  FoldNonRolledExpr	  on
 	  LocalBlockOutputs	  on
 	  RollThreshold		  5
-	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
 	  ActiveStateOutputEnumStorageType "Native Integer"
-	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
 	  InitFltsAndDblsToZero	  off
@@ -455,13 +435,12 @@ Model {
 	  LifeSpan		  "inf"
 	  MaxStackSize		  "Inherit from target"
 	  BufferReusableBoundary  on
-	  SimCompilerOptimization "Off"
+	  SimCompilerOptimization "off"
 	  AccelVerboseBuild	  off
-	  ParallelExecutionInRapidAccelerator on
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  11
-	  Version		  "1.13.1"
+	  Version		  "1.16.2"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -488,7 +467,6 @@ Model {
 	  IgnoredZcDiagnostic	  "warning"
 	  SolverPrmCheckMsg	  "none"
 	  InheritedTsInSrcMsg	  "warning"
-	  DiscreteInheritContinuousMsg "warning"
 	  MultiTaskDSMMsg	  "warning"
 	  MultiTaskCondExecSysMsg "none"
 	  MultiTaskRateTransMsg	  "error"
@@ -521,12 +499,11 @@ Model {
 	  BusObjectLabelMismatch  "warning"
 	  RootOutportRequireBusObject "warning"
 	  AssertControl		  "UseLocalSettings"
-	  EnableOverflowDetection off
+	  AllowSymbolicDim	  on
 	  ModelReferenceIOMsg	  "none"
 	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
 	  ModelReferenceVersionMismatchMessage "none"
 	  ModelReferenceIOMismatchMessage "none"
-	  ModelReferenceCSMismatchMessage "none"
 	  UnknownTsInhSupMsg	  "warning"
 	  ModelReferenceDataLoggingMessage "warning"
 	  ModelReferenceSymbolNameMessage "warning"
@@ -538,7 +515,9 @@ Model {
 	  StrictBusMsg		  "ErrorLevel1"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
-	  LoggingUnavailableSignals "error"
+	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
 	  BlockIODiagnostic	  "none"
 	  SFUnusedDataAndEventsDiag "warning"
 	  SFUnexpectedBacktrackingDiag "warning"
@@ -548,10 +527,15 @@ Model {
 	  SFUnconditionalTransitionShadowingDiag "warning"
 	  SFUndirectedBroadcastEventsDiag "warning"
 	  SFTransitionActionBeforeConditionDiag	"warning"
+	  SFOutputUsedAsStateInMooreChartDiag "error"
+	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  12
-	  Version		  "1.13.1"
+	  Version		  "1.16.2"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -583,17 +567,19 @@ Model {
 	  TargetIntDivRoundTo	  "Undefined"
 	  TargetEndianess	  "Unspecified"
 	  TargetWordSize	  32
-	  TargetTypeEmulationWarnSuppressLevel 0
 	  TargetPreprocMaxBitsSint 32
 	  TargetPreprocMaxBitsUint 32
 	  TargetHWDeviceType	  "Specified"
 	  TargetUnknown		  on
 	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  13
-	  Version		  "1.13.1"
+	  Version		  "1.16.2"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  EnableRefExpFcnMdlSchedulingChecks on
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
 	  ParallelModelReferenceErrorOnInvalidPool on
@@ -607,13 +593,9 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  14
-	  Version		  "1.13.1"
-	  SFSimEnableDebug	  on
-	  SFSimOverflowDetection  on
+	  Version		  "1.16.2"
 	  SFSimEcho		  on
-	  SimBlas		  on
 	  SimCtrlC		  on
-	  SimExtrinsic		  on
 	  SimIntegrity		  on
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
@@ -623,7 +605,7 @@ Model {
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  15
-	  Version		  "1.13.1"
+	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -638,12 +620,12 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
 	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
-	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
 	  PostCodeGenCommand	  ""
 	  Description		  ""
@@ -655,26 +637,13 @@ Model {
 	  TLCDebug		  off
 	  TLCCoverage		  off
 	  TLCAssert		  off
-	  ProcessScriptMode	  "Default"
-	  ConfigurationMode	  "Optimized"
-	  ProcessScript		  ""
-	  ConfigurationScript	  ""
-	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
-	  CustomSourceCode	  ""
-	  CustomHeaderCode	  ""
-	  CustomInclude		  ""
-	  CustomSource		  ""
-	  CustomLibrary		  ""
-	  CustomInitializer	  ""
-	  CustomTerminator	  ""
 	  Toolchain		  "Automatically locate an installed toolchain"
 	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
-	  GenerateErtSFunction	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
@@ -683,28 +652,25 @@ Model {
 	  SILDebugging		  off
 	  TargetLang		  "C"
 	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
-	  IncludeERTFirstTime	  off
 	  GenerateTraceInfo	  off
 	  GenerateTraceReport	  off
 	  GenerateTraceReportSl	  off
 	  GenerateTraceReportSf	  off
 	  GenerateTraceReportEml  off
-	  GenerateCodeInfo	  off
 	  GenerateWebview	  off
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
-	  RTWCompilerOptimization "Off"
+	  GenerateMissedCodeReplacementReport off
+	  RTWCompilerOptimization "off"
 	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
-	  CustomRebuildMode	  "OnUpdate"
-	  DataInitializer	  ""
 	  SharedConstantsCachingThreshold 1024
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      16
-	      Version		      "1.13.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		21
@@ -733,6 +699,7 @@ Model {
 	      }
 	      ForceParamTrailComments off
 	      GenerateComments	      on
+	      CommentStyle	      "Auto"
 	      IgnoreCustomStorageClasses on
 	      IgnoreTestpoints	      off
 	      IncHierarchyInIds	      off
@@ -772,7 +739,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      17
-	      Version		      "1.13.1"
+	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
 		Dimension		15
@@ -795,16 +762,17 @@ Model {
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
-	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
 	      ERTMultiwordLength      256
 	      MultiwordLength	      2048
 	      GenerateFullHeader      on
+	      InferredTypesCompatibility off
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
-	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
@@ -821,20 +789,23 @@ Model {
 	      LogVarNameModifier      "rt_"
 	      MatFileLogging	      on
 	      MultiInstanceERTCode    off
+	      CodeInterfacePackaging  "Nonreusable function"
 	      SupportNonFinite	      on
 	      SupportComplex	      on
 	      PurelyIntegerCode	      off
 	      SupportContinuousTime   on
 	      SupportNonInlinedSFcns  on
 	      SupportVariableSizeSignals off
-	      EnableShiftOperators    on
 	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
 	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
 	      ModelStepFunctionPrototypeControlCompliant off
 	      CPPClassGenCompliant    on
 	      AutosarCompliant	      off
 	      GRTInterface	      on
 	      GenerateAllocFcn	      off
+	      UseToolchainInfoCompliant	on
+	      GenerateSharedConstants on
 	      UseMalloc		      off
 	      ExtMode		      off
 	      ExtModeStaticAlloc      off
@@ -848,9 +819,43 @@ Model {
 	      RTWCAPIStates	      off
 	      RTWCAPIRootIO	      off
 	      GenerateASAP2	      off
+	      MultiInstanceErrorCode  "Error"
 	    }
 	    PropName		    "Components"
 	  }
+	}
+	SlCovCC.ConfigComp {
+	  $ObjectID		  18
+	  Version		  "1.16.2"
+	  Description		  "Simulink Coverage Configuration Component"
+	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
+	  RecordCoverage	  off
+	  CovPath		  "/"
+	  CovSaveName		  "covdata"
+	  CovMetricSettings	  "dw"
+	  CovNameIncrementing	  off
+	  CovHtmlReporting	  on
+	  CovForceBlockReductionOff on
+	  CovEnableCumulative	  on
+	  CovSaveCumulativeToWorkspaceVar on
+	  CovSaveSingleToWorkspaceVar on
+	  CovCumulativeVarName	  "covCumulativeData"
+	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
+	  CovReportOnPause	  on
+	  CovModelRefEnable	  "Off"
+	  CovExternalEMLEnable	  off
+	  CovSFcnEnable		  on
+	  CovBoundaryAbsTol	  1e-05
+	  CovBoundaryRelTol	  0.01
+	  CovUseTimeInterval	  off
+	  CovStartTime		  0
+	  CovStopTime		  0
 	}
 	PropName		"Components"
       }
@@ -866,7 +871,7 @@ Model {
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    18
+    $ObjectID		    19
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -909,7 +914,7 @@ Model {
   MaskDefaults {
     SelfModifiable	    "off"
     IconFrame		    "on"
-    IconOpaque		    "on"
+    IconOpaque		    "opaque"
     RunInitForIconRedraw    "off"
     IconRotate		    "none"
     PortRotate		    "default"
@@ -974,6 +979,7 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
+      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
@@ -991,6 +997,9 @@ Model {
       LimitOutput	      off
       UpperSaturationLimit    "inf"
       LowerSaturationLimit    "-inf"
+      WrapState		      off
+      WrappedStateUpperValue  "pi"
+      WrappedStateLowerValue  "-pi"
       ShowSaturationPort      off
       ShowStatePort	      off
       AbsoluteTolerance	      "auto"
@@ -1014,6 +1023,7 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
+      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
@@ -1044,11 +1054,15 @@ Model {
       Permissions	      "ReadWrite"
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
       CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
       RTWFileNameOpts	      "Auto"
       FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
@@ -1058,10 +1072,13 @@ Model {
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
       SFBlockType	      "NONE"
-      Variant		      off
       GeneratePreprocessorConditionals off
+      TreatAsGroupedWhenPropagatingVariantConditions on
       ContentPreviewEnabled   off
+      IsWebBlock	      off
     }
     Block {
       BlockType		      Sum
@@ -1087,10 +1104,11 @@ Model {
       VariableName	      "simulink_output"
       MaxDataPoints	      "1000"
       Decimation	      "1"
-      SampleTime	      "0"
       SaveFormat	      "Array"
+      Save2DSignal	      "Inherit from input (this choice will be removed - see release notes)"
       FixptAsFi		      off
       NumInputs		      "1"
+      SampleTime	      "0"
     }
     Block {
       BlockType		      Trigonometry
@@ -1103,7 +1121,7 @@ Model {
   }
   System {
     Name		    "AVION_CONTROL"
-    Location		    [-8, -8, 1374, 736]
+    Location		    [1528, -7, 2886, 847]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1115,7 +1133,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "40"
+    ZoomFactor		    "70"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "497"
     Block {
@@ -1126,13 +1144,8 @@ Model {
       Position		      [355, 320, 450, 520]
       ZOrder		      -1
       BackgroundColor	      "green"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
       RequestExecContextInheritance off
-      MaskHideContents	      off
+      Variant		      off
       System {
 	Name			"AERO"
 	Location		[1358, -78, 2974, 838]
@@ -1621,14 +1634,9 @@ Model {
       Ports		      [5, 3]
       Position		      [305, 850, 400, 1050]
       ZOrder		      105
-      BackgroundColor	      "[0.000000, 0.819608, 0.000000]"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
+      BackgroundColor	      "green"
       RequestExecContextInheritance off
-      MaskHideContents	      off
+      Variant		      off
       System {
 	Name			"AERO1"
 	Location		[1358, -78, 2974, 838]
@@ -2128,13 +2136,8 @@ Model {
       Position		      [715, 343, 825, 467]
       ZOrder		      -2
       BackgroundColor	      "lightBlue"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
       RequestExecContextInheritance off
-      MaskHideContents	      off
+      Variant		      off
       System {
 	Name			"DYN"
 	Location		[1528, -7, 2822, 727]
@@ -2183,13 +2186,8 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [310, 230, 390, 280]
 	  ZOrder		  14
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "-D/m"
 	    Location		    [1528, -7, 2822, 727]
@@ -2273,13 +2271,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [635, 275, 675, 335]
 	  ZOrder		  19
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "-L / m*VT"
 	    Location		    [-8, -8, 1374, 776]
@@ -2492,13 +2485,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [330, 355, 370, 415]
 	  ZOrder		  13
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "FT/m * Cos alfa"
 	    Location		    [-8, -8, 1374, 776]
@@ -2637,13 +2625,8 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [585, 340, 625, 400]
 	  ZOrder		  18
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "FT/m * Cos alfa1"
 	    Location		    [-8, -8, 1374, 776]
@@ -2819,13 +2802,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [840, 430, 880, 490]
 	  ZOrder		  23
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "Subsystem"
 	    Location		    [100, 100, 900, 600]
@@ -2946,13 +2924,8 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [585, 185, 645, 245]
 	  ZOrder		  16
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "g*cos(teta - alfa)/VT"
 	    Location		    [-8, -8, 1374, 776]
@@ -3125,13 +3098,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [340, 75, 380, 135]
 	  ZOrder		  15
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "g*sin(teta - alfa)"
 	    Location		    [1528, -7, 2822, 727]
@@ -3558,14 +3526,9 @@ Model {
       Ports		      [3, 4]
       Position		      [665, 873, 775, 997]
       ZOrder		      104
-      BackgroundColor	      "[0.380392, 0.741176, 0.988235]"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
+      BackgroundColor	      "lightBlue"
       RequestExecContextInheritance off
-      MaskHideContents	      off
+      Variant		      off
       System {
 	Name			"DYN1"
 	Location		[1528, -7, 2822, 727]
@@ -3614,13 +3577,8 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [310, 230, 390, 280]
 	  ZOrder		  14
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "-D/m"
 	    Location		    [1528, -7, 2822, 727]
@@ -3704,13 +3662,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [635, 275, 675, 335]
 	  ZOrder		  19
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "-L / m*VT"
 	    Location		    [-8, -8, 1374, 776]
@@ -3923,13 +3876,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [330, 355, 370, 415]
 	  ZOrder		  13
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "FT/m * Cos alfa"
 	    Location		    [-8, -8, 1374, 776]
@@ -4068,13 +4016,8 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [585, 340, 625, 400]
 	  ZOrder		  18
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "FT/m * Cos alfa1"
 	    Location		    [-8, -8, 1374, 776]
@@ -4250,13 +4193,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [840, 430, 880, 490]
 	  ZOrder		  23
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "Subsystem"
 	    Location		    [100, 100, 900, 600]
@@ -4377,13 +4315,8 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [585, 185, 645, 245]
 	  ZOrder		  16
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "g*cos(teta - alfa)/VT"
 	    Location		    [-8, -8, 1374, 776]
@@ -4556,13 +4489,8 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [340, 75, 380, 135]
 	  ZOrder		  15
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
 	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
+	  Variant		  off
 	  System {
 	    Name		    "g*sin(teta - alfa)"
 	    Location		    [1528, -7, 2822, 727]
@@ -5209,7 +5137,7 @@ Model {
       Ports		      [1, 1]
       Position		      [905, 898, 955, 972]
       ZOrder		      98
-      BackgroundColor	      "[0.000000, 0.819608, 0.000000]"
+      BackgroundColor	      "green"
       InitialCondition	      "etat_ini"
       Port {
 	PortNumber		1
@@ -5235,7 +5163,7 @@ Model {
       Ports		      [1, 1]
       Position		      [1335, 1103, 1385, 1177]
       ZOrder		      97
-      BackgroundColor	      "[0.000000, 0.819608, 0.000000]"
+      BackgroundColor	      "green"
       InitialCondition	      "pos_ini"
     }
     Block {
@@ -5388,13 +5316,8 @@ Model {
       Position		      [445, 560, 545, 680]
       ZOrder		      -15
       BackgroundColor	      "lightBlue"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
       RequestExecContextInheritance off
-      MaskHideContents	      off
+      Variant		      off
       System {
 	Name			"Propulsion"
 	Location		[1358, -78, 2974, 838]
@@ -5745,14 +5668,9 @@ Model {
       Ports		      [2, 2]
       Position		      [395, 1090, 495, 1210]
       ZOrder		      91
-      BackgroundColor	      "[0.380392, 0.741176, 0.988235]"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
+      BackgroundColor	      "lightBlue"
       RequestExecContextInheritance off
-      MaskHideContents	      off
+      Variant		      off
       System {
 	Name			"Propulsion1"
 	Location		[1358, -78, 2974, 838]
@@ -6315,7 +6233,7 @@ Model {
       SID		      "471"
       Position		      [1080, 933, 1145, 997]
       ZOrder		      80
-      BackgroundColor	      "[0.000000, 0.819608, 0.000000]"
+      BackgroundColor	      "green"
       Gain		      "r2d_cst"
     }
     Block {
@@ -6557,99 +6475,11 @@ Model {
     }
     Block {
       BlockType		      Outport
-      Name		      "D_aero1"
-      SID		      "478"
-      Position		      [515, 878, 545, 892]
-      ZOrder		      73
-      NamePlacement	      "alternate"
-      Port		      "22"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "L_aero1"
-      SID		      "479"
-      Position		      [515, 943, 545, 957]
-      ZOrder		      72
-      Port		      "23"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "M_aero1"
-      SID		      "480"
-      Position		      [515, 1008, 545, 1022]
-      ZOrder		      71
-      NamePlacement	      "alternate"
-      Port		      "24"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "F_thrust1"
-      SID		      "481"
-      Position		      [675, 1073, 705, 1087]
-      ZOrder		      70
-      Port		      "25"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "M_thrust1"
-      SID		      "482"
-      Position		      [670, 1218, 700, 1232]
-      ZOrder		      69
-      NamePlacement	      "alternate"
-      Port		      "26"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "VT_dot1"
-      SID		      "483"
-      Position		      [850, 1083, 880, 1097]
-      ZOrder		      68
-      NamePlacement	      "alternate"
-      Port		      "27"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "alfa_dot1"
-      SID		      "484"
-      Position		      [850, 1118, 880, 1132]
-      ZOrder		      67
-      NamePlacement	      "alternate"
-      Port		      "28"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "teta_dot1"
-      SID		      "485"
-      Position		      [850, 1153, 880, 1167]
-      ZOrder		      66
-      NamePlacement	      "alternate"
-      Port		      "29"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
-      Name		      "q_dot1"
-      SID		      "486"
-      Position		      [850, 1188, 880, 1202]
-      ZOrder		      65
-      NamePlacement	      "alternate"
-      Port		      "30"
-      IconDisplay	      "Port number"
-    }
-    Block {
-      BlockType		      Outport
       Name		      "h1"
       SID		      "487"
       Position		      [1475, 1118, 1505, 1132]
       ZOrder		      64
-      Port		      "31"
+      Port		      "22"
       IconDisplay	      "Port number"
     }
     Block {
@@ -6658,7 +6488,7 @@ Model {
       SID		      "488"
       Position		      [1475, 1148, 1505, 1162]
       ZOrder		      63
-      Port		      "32"
+      Port		      "23"
       IconDisplay	      "Port number"
     }
     Line {
@@ -7138,52 +6968,25 @@ Model {
       ZOrder		      293
       SrcBlock		      "AERO1"
       SrcPort		      1
-      Points		      [40, 0]
-      Branch {
-	ZOrder			292
-	Points			[0, 15]
-	DstBlock		"Mux4"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			291
-	DstBlock		"D_aero1"
-	DstPort			1
-      }
+      Points		      [40, 0; 0, 15]
+      DstBlock		      "Mux4"
+      DstPort		      1
     }
     Line {
       ZOrder		      296
       SrcBlock		      "AERO1"
       SrcPort		      2
-      Points		      [40, 0]
-      Branch {
-	ZOrder			295
-	Points			[0, -15]
-	DstBlock		"Mux4"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			294
-	DstBlock		"L_aero1"
-	DstPort			1
-      }
+      Points		      [40, 0; 0, -15]
+      DstBlock		      "Mux4"
+      DstPort		      2
     }
     Line {
       ZOrder		      299
       SrcBlock		      "AERO1"
       SrcPort		      3
-      Points		      [40, 0]
-      Branch {
-	ZOrder			298
-	Points			[0, -45]
-	DstBlock		"Mux4"
-	DstPort			3
-      }
-      Branch {
-	ZOrder			297
-	DstBlock		"M_aero1"
-	DstPort			1
-      }
+      Points		      [40, 0; 0, -45]
+      DstBlock		      "Mux4"
+      DstPort		      3
     }
     Line {
       Name		      "DLM_aero"
@@ -7198,35 +7001,15 @@ Model {
       ZOrder		      303
       SrcBlock		      "Propulsion1"
       SrcPort		      1
-      Points		      [20, 0]
-      Branch {
-	ZOrder			302
-	Points			[0, -40]
-	DstBlock		"F_thrust1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			301
-	DstBlock		"Mux5"
-	DstPort			1
-      }
+      DstBlock		      "Mux5"
+      DstPort		      1
     }
     Line {
       ZOrder		      306
       SrcBlock		      "Propulsion1"
       SrcPort		      2
-      Points		      [20, 0]
-      Branch {
-	ZOrder			305
-	Points			[0, 45]
-	DstBlock		"M_thrust1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			304
-	DstBlock		"Mux5"
-	DstPort			2
-      }
+      DstBlock		      "Mux5"
+      DstPort		      2
     }
     Line {
       Name		      "FM_thrust"
@@ -7251,69 +7034,29 @@ Model {
       ZOrder		      311
       SrcBlock		      "DYN1"
       SrcPort		      1
-      Points		      [45, 0]
-      Branch {
-	ZOrder			310
-	Points			[0, 200]
-	DstBlock		"VT_dot1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			309
-	DstBlock		"Mux6"
-	DstPort			1
-      }
+      DstBlock		      "Mux6"
+      DstPort		      1
     }
     Line {
       ZOrder		      314
       SrcBlock		      "DYN1"
       SrcPort		      2
-      Points		      [35, 0]
-      Branch {
-	ZOrder			313
-	Points			[0, 205]
-	DstBlock		"alfa_dot1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			312
-	DstBlock		"Mux6"
-	DstPort			2
-      }
+      DstBlock		      "Mux6"
+      DstPort		      2
     }
     Line {
       ZOrder		      317
       SrcBlock		      "DYN1"
       SrcPort		      3
-      Points		      [25, 0]
-      Branch {
-	ZOrder			316
-	Points			[0, 210]
-	DstBlock		"teta_dot1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			315
-	DstBlock		"Mux6"
-	DstPort			3
-      }
+      DstBlock		      "Mux6"
+      DstPort		      3
     }
     Line {
       ZOrder		      320
       SrcBlock		      "DYN1"
       SrcPort		      4
-      Points		      [15, 0]
-      Branch {
-	ZOrder			319
-	Points			[0, 215]
-	DstBlock		"q_dot1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			318
-	DstBlock		"Mux6"
-	DstPort			4
-      }
+      DstBlock		      "Mux6"
+      DstPort		      4
     }
     Line {
       Name		      "state_dot"
@@ -7659,11 +7402,12 @@ Model {
     Annotation {
       SID		      "490"
       Name		      "Calcul de la position et de l'altitude."
-      Position		      [1247, 1197, 1436, 1214]
-      AutoSize		      on
-      WordWrap		      off
+      Position		      [1247, 1189, 1442, 1206]
+      InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      off
+      FixedWidth	      off
       HorizontalAlignment     "left"
-      BackgroundColor	      "[0.380392, 0.741176, 0.988235]"
+      BackgroundColor	      "lightBlue"
       ZOrder		      -2
       FontName		      "Arial"
       FontSize		      12
