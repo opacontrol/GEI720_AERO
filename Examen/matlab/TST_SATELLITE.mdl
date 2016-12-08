@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.56"
+    ComputedModelVersion    "1.57"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -55,10 +55,10 @@ Model {
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
 	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"61"
+	LoadSaveID		"34"
 	Extents			[1559.0, 709.0]
 	ZoomFactor		[1.0]
-	Offset			[-29.600000000000023, 76.358778095918581]
+	Offset			[0.0, 29.312501102685928]
       }
     }
   }
@@ -68,9 +68,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "deemm"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Dec 08 16:33:14 2016"
-  RTWModifiedTimeStamp	  403115455
-  ModelVersionFormat	  "1.%<AutoIncrement:56>"
+  LastModifiedDate	  "Thu Dec 08 16:48:09 2016"
+  RTWModifiedTimeStamp	  403116486
+  ModelVersionFormat	  "1.%<AutoIncrement:57>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1243,7 +1243,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "tor_RW1"
@@ -1303,7 +1303,7 @@ Model {
 	  }
 	  System {
 	    Name		    "DETECTEUR"
-	    Location		    [765, 52, 1892, 738]
+	    Location		    [1528, -7, 2822, 727]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1836,14 +1836,13 @@ Model {
 	  Port {
 	    PortNumber		    3
 	    Name		    "wsc_B"
-	    PropagatedSignals	    "wsc_B"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  System {
 	    Name		    "DYNSAT"
 	    Location		    [1528, -7, 2822, 727]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -2607,7 +2606,6 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "hrw1_B"
-	    PropagatedSignals	    "hrw1_B"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -2828,7 +2826,6 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "hrw2_B"
-	    PropagatedSignals	    "hrw2_B"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -2975,25 +2972,16 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Constant"
 	      SrcPort		      1
-	      Points		      [28, 0]
+	      Points		      [28, 0; 0, 1]
 	      Branch {
-		ZOrder			14
-		Points			[186, 0]
-		Branch {
-		  ZOrder		  16
-		  DstBlock		  "Gain"
-		  DstPort		  1
-		}
-		Branch {
-		  ZOrder		  15
-		  Points		  [0, -85]
-		  DstBlock		  "Product"
-		  DstPort		  2
-		}
+		ZOrder			24
+		Points			[141, 0; 0, -64; 176, 0; 0, -22]
+		DstBlock		"Product"
+		DstPort			2
 	      }
 	      Branch {
-		ZOrder			12
-		Points			[0, 135]
+		ZOrder			23
+		Points			[0, 134]
 		DstBlock		"Dot Product"
 		DstPort			1
 	      }
@@ -3017,8 +3005,18 @@ Model {
 	      ZOrder		      11
 	      SrcBlock		      "Integrator"
 	      SrcPort		      1
-	      DstBlock		      "Product"
-	      DstPort		      1
+	      Points		      [60, 0]
+	      Branch {
+		ZOrder			22
+		Points			[0, 100]
+		DstBlock		"Gain"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			21
+		DstBlock		"Product"
+		DstPort			1
+	      }
 	    }
 	    Line {
 	      ZOrder		      19
@@ -3050,7 +3048,6 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "hrw3_B"
-	    PropagatedSignals	    "hrw3_B"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -3063,7 +3060,7 @@ Model {
 	  System {
 	    Name		    "ROUE_3"
 	    Location		    [1528, -7, 2822, 727]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3188,8 +3185,18 @@ Model {
 	      ZOrder		      14
 	      SrcBlock		      "Integrator"
 	      SrcPort		      1
-	      DstBlock		      "Product"
-	      DstPort		      1
+	      Points		      [70, 0]
+	      Branch {
+		ZOrder			30
+		Points			[0, 105]
+		DstBlock		"Gain"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			29
+		DstBlock		"Product"
+		DstPort			1
+	      }
 	    }
 	    Line {
 	      ZOrder		      17
@@ -3206,26 +3213,17 @@ Model {
 	      SrcPort		      1
 	      Points		      [78, 0]
 	      Branch {
-		ZOrder			21
+		ZOrder			33
 		Points			[0, 135]
 		DstBlock		"Dot Product"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			20
-		Points			[131, 0]
-		Branch {
-		  ZOrder		  26
-		  Points		  [0, -85]
-		  DstBlock		  "Product"
-		  DstPort		  2
-		}
-		Branch {
-		  ZOrder		  25
-		  Points		  [42, 0; 0, 5]
-		  DstBlock		  "Gain"
-		  DstPort		  1
-		}
+		ZOrder			32
+		Labels			[1, 1]
+		Points			[0, -41; 307, 0]
+		DstBlock		"Product"
+		DstPort			2
 	      }
 	    }
 	    Line {
