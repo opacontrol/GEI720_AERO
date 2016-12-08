@@ -124,7 +124,7 @@ Model {
       Name		      "pN1"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.158"
+    ComputedModelVersion    "1.159"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -147,7 +147,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1382.0, 744.0]
+      Location		      [-8.0, 0.0, 1378.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -171,9 +171,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1332.0, 569.0]
-	ZoomFactor		[1.0]
-	Offset			[78.57574526244025, 433.542246877304]
+	Extents			[1328.0, 569.0]
+	ZoomFactor		[0.5]
+	Offset			[-580.3069547134935, 165.34781269254495]
       }
     }
   }
@@ -183,9 +183,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 24 17:11:26 2016"
-  RTWModifiedTimeStamp	  401908285
-  ModelVersionFormat	  "1.%<AutoIncrement:158>"
+  LastModifiedDate	  "Thu Dec 08 11:50:00 2016"
+  RTWModifiedTimeStamp	  403098572
+  ModelVersionFormat	  "1.%<AutoIncrement:159>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1067,7 +1067,7 @@ Model {
   }
   System {
     Name		    "AVION_OBSCTL"
-    Location		    [-8, -8, 1374, 736]
+    Location		    [-8, 0, 1370, 744]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1079,7 +1079,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "50"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "530"
     Block {
@@ -1577,16 +1577,6 @@ Model {
 	  }
 	}
       }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant"
-      SID		      "494"
-      Position		      [1185, 755, 1215, 785]
-      ZOrder		      108
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      Value		      "Xe"
     }
     Block {
       BlockType		      Constant
@@ -3755,18 +3745,6 @@ Model {
     }
     Block {
       BlockType		      Sum
-      Name		      "Sum2"
-      SID		      "493"
-      Ports		      [2, 1]
-      Position		      [1010, 747, 1035, 778]
-      ZOrder		      107
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      Inputs		      "+-"
-    }
-    Block {
-      BlockType		      Sum
       Name		      "Sum3"
       SID		      "500"
       Ports		      [3, 1]
@@ -3944,18 +3922,6 @@ Model {
       ZOrder		      122
       BackgroundColor	      "[0.000000, 0.819608, 0.000000]"
       Gain		      "r2d_cst"
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "rad2deg2"
-      SID		      "495"
-      Position		      [825, 733, 890, 797]
-      ZOrder		      109
-      BlockMirror	      on
-      BackgroundColor	      "green"
-      NamePlacement	      "alternate"
-      Gain		      "-K"
-      Multiplication	      "Matrix(K*u)"
     }
     Block {
       BlockType		      Gain
@@ -4417,18 +4383,8 @@ Model {
       Points		      [35, 0]
       Branch {
 	ZOrder			33
-	Points			[15, 0]
-	Branch {
-	  ZOrder		  419
-	  Points		  [0, 99; 35, 0; 0, 251]
-	  DstBlock		  "Sum2"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  418
-	  DstBlock		  "Demux"
-	  DstPort		  1
-	}
+	DstBlock		"Demux"
+	DstPort			1
       }
       Branch {
 	ZOrder			34
@@ -4702,20 +4658,6 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      420
-      SrcBlock		      "Constant"
-      SrcPort		      1
-      DstBlock		      "Sum2"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      422
-      SrcBlock		      "Sum2"
-      SrcPort		      1
-      DstBlock		      "rad2deg2"
-      DstPort		      1
-    }
-    Line {
       Name		      "delta_deg"
       ZOrder		      425
       Labels		      [0, 0]
@@ -4747,10 +4689,6 @@ Model {
       DstPort		      1
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      441
       SrcBlock		      "rad2deg1"
       SrcPort		      1
@@ -4759,10 +4697,6 @@ Model {
     }
     Line {
       Name		      "alfa_deg"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      445
       SrcBlock		      "Demux6"
       SrcPort		      1
@@ -4781,10 +4715,6 @@ Model {
       }
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      448
       SrcBlock		      "Demux6"
       SrcPort		      2
@@ -4802,10 +4732,6 @@ Model {
       }
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      450
       SrcBlock		      "Sum4"
       SrcPort		      1
@@ -4830,10 +4756,6 @@ Model {
       }
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      464
       SrcBlock		      "Demux5"
       SrcPort		      1
@@ -4851,10 +4773,6 @@ Model {
     }
     Line {
       Name		      "gama"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      474
       Labels		      [0, 0]
       SrcBlock		      "Sum6"
@@ -4874,10 +4792,6 @@ Model {
     }
     Line {
       Name		      "singama"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      475
       Labels		      [0, 1]
       SrcBlock		      "Trigonometric\nFunction2"
@@ -4888,10 +4802,6 @@ Model {
     }
     Line {
       Name		      "cosgama"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      476
       Labels		      [0, 1]
       SrcBlock		      "Trigonometric\nFunction3"
@@ -4901,10 +4811,6 @@ Model {
       DstPort		      2
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      477
       SrcBlock		      "INTEG_POS1"
       SrcPort		      1
@@ -4912,10 +4818,6 @@ Model {
       DstPort		      1
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      478
       SrcBlock		      "Demux7"
       SrcPort		      1
@@ -4923,10 +4825,6 @@ Model {
       DstPort		      1
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      479
       SrcBlock		      "Demux7"
       SrcPort		      2
@@ -4935,10 +4833,6 @@ Model {
     }
     Line {
       Name		      "q"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      506
       Labels		      [0, 0]
       SrcBlock		      "Demux8"
@@ -4948,10 +4842,6 @@ Model {
     }
     Line {
       Name		      "alfa"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      505
       Labels		      [0, 0]
       SrcBlock		      "Demux8"
@@ -4961,10 +4851,6 @@ Model {
     }
     Line {
       Name		      "teta"
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      504
       Labels		      [0, 0]
       SrcBlock		      "Demux8"
@@ -4974,10 +4860,6 @@ Model {
       DstPort		      2
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      483
       SrcBlock		      "Mux5"
       SrcPort		      1
@@ -4985,10 +4867,6 @@ Model {
       DstPort		      2
     }
     Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      484
       SrcBlock		      "Product1"
       SrcPort		      1
@@ -5029,14 +4907,6 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      427
-      SrcBlock		      "rad2deg2"
-      SrcPort		      1
-      Points		      [-661, 0; 0, -215]
-      DstBlock		      "Sum5"
-      DstPort		      2
-    }
-    Line {
       ZOrder		      519
       SrcBlock		      "Sum3"
       SrcPort		      1
@@ -5062,9 +4932,19 @@ Model {
       ZOrder		      528
       SrcBlock		      "rad2deg3"
       SrcPort		      1
-      Points		      [-9, 0; 0, -225]
-      DstBlock		      "Mux4"
-      DstPort		      1
+      Points		      [-43, 0]
+      Branch {
+	ZOrder			601
+	Points			[0, -225]
+	DstBlock		"Mux4"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			600
+	Points			[0, 35; -262, 0; 0, -555]
+	DstBlock		"Sum5"
+	DstPort			2
+      }
     }
     Line {
       ZOrder		      449
