@@ -45,7 +45,7 @@ RPM2RAD = 2*pi/60;
  RW3inertie_inv = 1/RW3inertie;
  wrw3_ini       = 40 * RPM2RAD;
  hrw3_ini       = RW3inertie*wrw3_ini;
- RW3axe_B       = [1 0 0]';
+ RW3axe_B       = [0 0 1]';
  hrw3_B_ini     = hrw3_ini*RW3axe_B;
  
 % Paramètre des 3 roues ensembles
@@ -58,7 +58,7 @@ RWaxe_B     = [RW1axe_B,RW2axe_B,RW3axe_B];
 
 % Inertie et conditions initiales du satellite
 
-SCinertie       = [8 0.2 -0.4; 0.2 10 0.5; -0.4 05 7];
+SCinertie       = [8 0.2 -0.4; 0.2 10 0.5; -0.4 0.5 7];
 SCinertie_inv   = inv(SCinertie);
 wsc_B_ini       = [0 0 0]';
 hsc_B_ini       = SCinertie * wsc_B_ini;
