@@ -16,8 +16,8 @@ Wb = [0 0 0 ];
  RW1inertie     = 4.10E-04;
  RW1inertie_inv = 1/RW1inertie;
  wrw1_ini       = 20 * RPM2RAD;
+ hrw1_ini       = RW1inertie*(wrw1_ini +(RW1axe_B'*C_AB*Wb));
  RW1axe_B       = [1 0 0]';
- hrw1_ini       = RW1inertie*(wrw1_ini +(RW1axe_B*Wb));
  hrw1_B_ini      = 0;
  
 
