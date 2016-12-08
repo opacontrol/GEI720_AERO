@@ -2,8 +2,13 @@
 
 % JdeL 
 % Décembre 2011
+% Modified by:
+%   - bouo3102
+%   - dems2304
 
-% constante utiles
+%
+% Constante utiles
+%
 RPM2RAD = 2*pi/60;
 
 % ROUE 1
@@ -24,7 +29,6 @@ RPM2RAD = 2*pi/60;
 
 % Inertie et conditions initiales de la roue 2
 
-
  RW2inertie     = 4.11E-04;
  RW2inertie_inv = 1/RW2inertie;
  wrw2_ini       = 30 * RPM2RAD;
@@ -37,8 +41,6 @@ RPM2RAD = 2*pi/60;
 
 % Inertie et conditions initiales de la roue 3
 
-
-
  RW3inertie     = 4.12E-04;
  RW3inertie_inv = 1/RW3inertie;
  wrw3_ini       = 40 * RPM2RAD;
@@ -46,10 +48,11 @@ RPM2RAD = 2*pi/60;
  RW3axe_B       = [1 0 0]';
  hrw3_B_ini     = hrw3_ini*RW3axe_B;
  
- % Paramètre des 3 roues ensembles
+% Paramètre des 3 roues ensembles
 % ------
 hrw_B_ini   = hrw1_B_ini + hrw2_B_ini + hrw3_B_ini;
 RWaxe_B     = [RW1axe_B,RW2axe_B,RW3axe_B];
+
 % SATELLITE
 % ---------
 
