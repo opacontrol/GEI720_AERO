@@ -78,33 +78,6 @@ epsilon_e = [0, 0, 0]';         % epsilon a equilibre
 eta_e     = 1;                  % eta a equilibre
 q_e       = [epsilon_e; eta_e]; % quaternion a equilibre
 
-hrw_B_e = hrw1_e*RW1axe_B + hrw2_e*RW2axe_B + hrw3_e*RW3axe_B;
-wb      = SCinertie_inv * (htot_B_e - hrw_B_e);
-
-htot_B_cross = [ 0          , -htot_B_e(3),  htot_B_e(2);
-                 htot_B_e(3), 0           , -htot_B_e(1);
-                -htot_B_e(2), htot_B_e(1) ,  0];
-
-wb_cross = [ 0    , -wb(3),  wb(2);
-             wb(3), 0     , -wb(1);
-            -wb(2), wb(1) ,  0];
-
-syms delta_htot_B ...
-     delta_Tex_B;
-delta_htot_B_dot = (htot_B_cross * SCinertie_inv - wb_cross) * ...
-                   delta_htot_B + eye(3) * delta_Tex_B;
-
-syms delta_Tc1 ...
-     delta_Tc2 ...
-     delta_Tc3;
-
-delta_hrw1_dot = delta_Tc1;
-delta_hrw2_dot = delta_Tc2;
-delta_hrw3_dot = delta_Tc3;
-
-syms wb1 wb2 wb3;
-w_b = [wb1; wb2; wb3];
-delta_epsilon_dot = (1/2) * w_b;
 
 %%%
 %%% P4-2
@@ -113,24 +86,12 @@ A = zeros(9,9);  % init matrice A
 B = zeros(9,6);  % init matrice B
 E = eye(3);
 
-% contribution de htot sur la matrice A
-A_htot     = htot_B_cross * SCinertie_inv - wb_cross;
+% Matrice A
+tmp = (1/2) * SCinertie_inv;
+A(7:9,1:3) = tmp;
+A(7:9,4:6) = -tmp;
 
-% contribution de hrw sur la matrice A
-E(1:4:end) = hrw_B_e;
-A_hrw      = E;
-
-% contribution de epsilon sur la matrice A
-E(1:4:end) = wb;
-A_epsilon  = E;
-
-% subtitution des des sous-matrices A
-A(1:3,1:3) = A_htot;
-A(4:6,4:6) = A_hrw;
-A(7:9,7:9) = A_epsilon;
-
-
-% subtitution des des sous-matrices B
+% Matrice B
 E = eye(3);
 B(1:3,1:3) = E;
 B(4:6,4:6) = E;
@@ -142,32 +103,22 @@ B(4:6,4:6) = E;
 C = zeros(6,9);
 D = zeros(6,6);
 
-% contribution de h_tot sur la matrice C
-C_htot = zeros(3,3);
+% Matrice C
+C(1,1:3) = -RW1axe_B'*SCinertie_inv;
+C(2,1:3) = -RW2axe_B'*SCinertie_inv;
+C(3,1:3) = -RW3axe_B'*SCinertie_inv;
 
-% contribution de hrw sur la matrice C
-C_hrw  = E;
-C_hrw(1:4:end) = [RW1inertie_inv, RW2inertie_inv, RW3inertie_inv]';
-
-% contribution d epsilon sur la matrice C
-C_epsilon = zeros(3,3);
-
-% subtitution des des sous-matrices C
-C(1:3,1:3) = C_htot;
-C(1:3,4:6) = C_hrw;
-C(4:6,7:9) = C_epsilon;
+tmp = [RW1inertie_inv + RW1axe_B'*SCinertie_inv*RW1axe_B, 0, 0; ...
+       0, RW2inertie_inv + RW2axe_B'*SCinertie_inv*RW2axe_B, 0; ...
+       0, 0, RW3inertie_inv + RW3axe_B'*SCinertie_inv*RW3axe_B];
+C(1:3,4:6) = tmp;
+C(4:6,7:9) = eye(3);
 
 %%%
 %%% Show results
 %%%
 SHOW_RESULTS = 1;
 if SHOW_RESULTS
-    delta_htot_B_dot
-    delta_hrw1_dot
-    delta_hrw2_dot
-    delta_hrw3_dot
-    delta_epsilon_dot
-
     A
     B
     C
