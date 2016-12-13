@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.63"
+    ComputedModelVersion    "1.66"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -56,7 +56,7 @@ Model {
 	LoadSaveID		"137"
 	Extents			[1328.0, 569.0]
 	ZoomFactor		[1.0]
-	Offset			[82.975166149796337, 195.88285777668204]
+	Offset			[207.21802329265324, 72.935238729063087]
       }
     }
   }
@@ -66,9 +66,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Dec 12 21:34:27 2016"
-  RTWModifiedTimeStamp	  403478819
-  ModelVersionFormat	  "1.%<AutoIncrement:63>"
+  LastModifiedDate	  "Tue Dec 13 15:51:44 2016"
+  RTWModifiedTimeStamp	  403544559
+  ModelVersionFormat	  "1.%<AutoIncrement:66>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1881,7 +1881,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "125"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "hrw_B"
@@ -3901,14 +3901,6 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  50
-	  SrcBlock		  "Demux1"
-	  SrcPort		  1
-	  Points		  [-2, 0; 0, -239; 90, 0; 0, -11]
-	  DstBlock		  "Add1"
-	  DstPort		  2
-	}
-	Line {
 	  ZOrder		  51
 	  SrcBlock		  "Demux1"
 	  SrcPort		  2
@@ -4505,10 +4497,7 @@ Stateflow {
     firstTransition	    15
     firstJunction	    14
     viewObj		    9
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
