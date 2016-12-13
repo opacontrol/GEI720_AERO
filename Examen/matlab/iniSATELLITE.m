@@ -117,10 +117,38 @@ C(4:6,7:9) = eye(3);
 %%%
 %%% Show results
 %%%
-SHOW_RESULTS = 1;
+SHOW_RESULTS = 0;
 if SHOW_RESULTS
     A
     B
     C
     D
 end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resolution d'examen %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Matrice de Q et R 
+Bdum = B(1:end,1:3);
+factreur_rho = 100 ;
+Q = eye(size(A,2));
+R = eye(size(B,2)) * factreur_rho;
+
+% calcul du gain optimal ( solution de l'equiation de riccati )
+
+[P, vp, K] = care(A,B,Q,R);
+% vp = eig (A - B*K) % for validation 
+vp 
+
+
+
+
+
+
+
+
+
+
+
+

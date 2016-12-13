@@ -124,7 +124,7 @@ Model {
       Name		      "pN1"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.159"
+    ComputedModelVersion    "1.167"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -172,8 +172,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1328.0, 569.0]
-	ZoomFactor		[0.5]
-	Offset			[-580.3069547134935, 165.34781269254495]
+	ZoomFactor		[0.6]
+	Offset			[-350.58267868145452, 306.7535428219345]
       }
     }
   }
@@ -183,12 +183,12 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Dec 08 11:50:00 2016"
-  RTWModifiedTimeStamp	  403098572
-  ModelVersionFormat	  "1.%<AutoIncrement:159>"
+  LastModifiedDate	  "Mon Dec 12 22:09:17 2016"
+  RTWModifiedTimeStamp	  403481354
+  ModelVersionFormat	  "1.%<AutoIncrement:167>"
   ConfigurationManager	  "none"
-  SampleTimeColors	  off
-  SampleTimeAnnotations	  off
+  SampleTimeColors	  on
+  SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
   WideLines		  off
   ShowLineDimensions	  on
@@ -1079,9 +1079,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "50"
+    ZoomFactor		    "60"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "530"
+    SIDHighWatermark	    "531"
     Block {
       BlockType		      SubSystem
       Name		      "AERO"
@@ -4535,8 +4535,8 @@ Model {
       SrcPort		      4
       Points		      [61, 0]
       Branch {
-	ZOrder			536
-	Points			[0, 270; 219, 0; 0, 150]
+	ZOrder			608
+	Points			[0, 310; 219, 0; 0, 110]
 	DstBlock		"Sum3"
 	DstPort			1
       }

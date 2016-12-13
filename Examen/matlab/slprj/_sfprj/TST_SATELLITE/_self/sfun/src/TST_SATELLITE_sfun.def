@@ -1,0 +1,3 @@
+LIBRARY TST_SATELLITE_sfun.mexw64
+EXPORTS
+mexFunction
