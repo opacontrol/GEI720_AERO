@@ -184,7 +184,7 @@ disp(tmp);
 Facteur_Pe = 2;
 Pe = Poled * Facteur_Pe;
 %P3-6 : Observabilite du systeme 
-Ob = obsv(A,C);
+Ob = obsv(A,[0 0 0 1]);
 unob = length(A)-rank(Ob);
 
 Co = ctrb(A,B);

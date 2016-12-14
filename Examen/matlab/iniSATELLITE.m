@@ -147,12 +147,11 @@ R = eye(size(B,2)) * factreur_rho;
 [P, vp, K] = care(A,B,Q,R);
 testing=eig(A-B*K);
 % vp = eig (A - B*K) % for validation 
-vp
-Q
-R
+
 % matrice COuts 
 Xe = [htot_B_e; hrw1_e;hrw2_e; hrw3_e; epsilon_e];
-Jc = Xe'*P*Xe
+Jc = Xe'*P*Xe;
+%Jc = trace(P)
 
 
 % COMMANDABILITÉ PAR RETOUR D’ÉTAT
@@ -168,6 +167,24 @@ fprintf('La dimention de la matrice A = %d\n', length(A));
 Ob = obsv(A,C);
 unob = length(A)-rank(Ob);
 
+%% choix de lobservateur 
+facteur_rho2 = 100;
+Re = [1 0 0 0 0 0
+      0 1 0 0 0 0
+      0 0 1 0 0 0
+      0 0 0 1/1000 0 0 
+      0 0 0 0 1/1000 0
+      0 0 0 0 0 1/1000];
+
+Qe = Re * facteur_rho2;
+
+[Pe, vpe, Ke] = care(A',C',Q,R);
+Ke = Ke';
+
+Aobs = A - Ke*C;
+Bobs = [B Ke];
+Cobs = eye(9);
+Dobs = zeros(9,12);
 
 
 

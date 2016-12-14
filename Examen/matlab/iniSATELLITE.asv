@@ -114,9 +114,9 @@ C(1,1:3) = -RW1axe_B'*SCinertie_inv;
 C(2,1:3) = -RW2axe_B'*SCinertie_inv;
 C(3,1:3) = -RW3axe_B'*SCinertie_inv;
 
-tmp = [RW1inertie_inv + RW1axe_B'*SCinertie_inv*RW1axe_B, 0, 0; ...
-       0, RW2inertie_inv + RW2axe_B'*SCinertie_inv*RW2axe_B, 0; ...
-       0, 0, RW3inertie_inv + RW3axe_B'*SCinertie_inv*RW3axe_B];
+tmp = [RW1inertie_inv + RW1axe_B'*SCinertie_inv*RW1axe_B, RW1axe_B'*SCinertie_inv*RW2axe_B,                  RW1axe_B'*SCinertie_inv*RW3axe_B; ...
+       RW2axe_B'*SCinertie_inv*RW1axe_B,                  RW2inertie_inv + RW2axe_B'*SCinertie_inv*RW2axe_B, RW2axe_B'*SCinertie_inv*RW3axe_B; ...
+       RW3axe_B'*SCinertie_inv*RW1axe_B,                  RW3axe_B'*SCinertie_inv*RW2axe_B,                  RW3inertie_inv + RW3axe_B'*SCinertie_inv*RW3axe_B];
 C(1:3,4:6) = tmp;
 C(4:6,7:9) = eye(3);
 
@@ -145,13 +145,15 @@ R = eye(size(B,2)) * factreur_rho;
 % calcul du gain optimal ( solution de l'equiation de riccati )
 
 [P, vp, K] = care(A,B,Q,R);
+testing=eig(A-B*K);
 % vp = eig (A - B*K) % for validation 
 vp
 Q
 R
 % matrice COuts 
 Xe = [htot_B_e; hrw1_e;hrw2_e; hrw3_e; epsilon_e];
-Jc = Xe'*P*Xe
+Jc = Xe'*P*Xe;
+%Jc = trace(P)
 
 
 % COMMANDABILITÉ PAR RETOUR D’ÉTAT
@@ -163,8 +165,11 @@ fprintf('\nLe rang de la matrice M = %d\n', M);
 fprintf('La dimention de la matrice A = %d\n', length(A));
 
 
+%P3-6 : Observabilite du systeme 
+Ob = obsv(A,C);
+unob = length(A)-rank(Ob);
 
-
+%% choix de lobservate
 
 
 

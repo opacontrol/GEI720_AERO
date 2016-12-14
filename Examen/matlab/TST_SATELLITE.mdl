@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.66"
+    ComputedModelVersion    "1.69"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1378.0, 744.0]
+      Location		      [-8.0, 0.0, 1367.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -54,9 +54,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkSubsys"
 	LoadSaveID		"137"
-	Extents			[1328.0, 569.0]
-	ZoomFactor		[1.0]
-	Offset			[207.21802329265324, 72.935238729063087]
+	Extents			[1317.0, 569.0]
+	ZoomFactor		[1.25]
+	Offset			[307.91546673178891, 467.08367552045621]
       }
     }
   }
@@ -66,9 +66,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Ouss"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Dec 13 15:51:44 2016"
-  RTWModifiedTimeStamp	  403544559
-  ModelVersionFormat	  "1.%<AutoIncrement:66>"
+  LastModifiedDate	  "Tue Dec 13 20:12:21 2016"
+  RTWModifiedTimeStamp	  403560738
+  ModelVersionFormat	  "1.%<AutoIncrement:69>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -943,6 +943,17 @@ Model {
       SFunctionDeploymentMode off
     }
     Block {
+      BlockType		      StateSpace
+      A			      "1"
+      B			      "1"
+      C			      "1"
+      D			      "1"
+      X0		      "0.0"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
+      Realization	      "auto"
+    }
+    Block {
       BlockType		      Step
       Time		      "1"
       Before		      "0"
@@ -1022,7 +1033,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "204"
+    SIDHighWatermark	    "212"
     Block {
       BlockType		      Clock
       Name		      "Clock"
@@ -1197,7 +1208,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Satellite"
-	Location		[-8, 0, 1370, 744]
+	Location		[-8, 0, 1359, 744]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1209,7 +1220,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"125"
 	Block {
 	  BlockType		  Inport
 	  Name			  "tor_RW1"
@@ -2653,24 +2664,20 @@ Model {
 	Block {
 	  BlockType		  Demux
 	  Name			  "Demux1"
-	  SID			  "200"
+	  SID			  "212"
 	  Ports			  [1, 4]
-	  Position		  [540, 535, 545, 655]
-	  ZOrder		  6
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
+	  Position		  [1200, 715, 1210, 860]
+	  ZOrder		  120
 	  ShowName		  off
 	  Outputs		  "[3,1,1,1]"
 	  DisplayOption		  "bar"
 	}
 	Block {
 	  BlockType		  Gain
-	  Name			  "Gain"
-	  SID			  "195"
-	  Position		  [635, 562, 700, 628]
-	  ZOrder		  1
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
+	  Name			  "Gain1"
+	  SID			  "209"
+	  Position		  [1075, 752, 1140, 818]
+	  ZOrder		  117
 	  Gain			  "-K"
 	  Multiplication	  "Matrix(K*u)"
 	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -2688,6 +2695,39 @@ Model {
 	  NamePlacement		  "alternate"
 	  ShowName		  off
 	  Inputs		  "[3,3,3]"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "206"
+	  Ports			  [4, 1]
+	  Position		  [435, 685, 440, 815]
+	  ZOrder		  114
+	  ShowName		  off
+	  Inputs		  "[3,1,1,1]"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "207"
+	  Ports			  [2, 1]
+	  Position		  [435, 837, 440, 943]
+	  ZOrder		  115
+	  ShowName		  off
+	  Inputs		  "[3,3]"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux3"
+	  SID			  "208"
+	  Ports			  [2, 1]
+	  Position		  [580, 729, 585, 836]
+	  ZOrder		  116
+	  ShowName		  off
+	  Inputs		  "[6,6]"
 	  DisplayOption		  "bar"
 	}
 	Block {
@@ -3171,7 +3211,7 @@ Model {
 	  }
 	  System {
 	    Name		    "ROUE_3"
-	    Location		    [-8, -8, 1374, 736]
+	    Location		    [-8, 0, 1370, 744]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3367,6 +3407,19 @@ Model {
 	      DstPort		      1
 	    }
 	  }
+	}
+	Block {
+	  BlockType		  StateSpace
+	  Name			  "State-Space"
+	  SID			  "205"
+	  Ports			  [1, 1]
+	  Position		  [695, 758, 770, 812]
+	  ZOrder		  113
+	  A			  "Aobs"
+	  B			  "Bobs"
+	  C			  "Cobs"
+	  D			  "Dobs"
+	  X0			  "0"
 	}
 	Block {
 	  BlockType		  Sum
@@ -3717,8 +3770,18 @@ Model {
 	  Labels		  [0, 0]
 	  SrcBlock		  "TACHO"
 	  SrcPort		  1
-	  DstBlock		  "wrel_mes"
-	  DstPort		  1
+	  Points		  [78, 0]
+	  Branch {
+	    ZOrder		    103
+	    Points		    [0, 540; -490, 0; 0, -90]
+	    DstBlock		    "Mux2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    102
+	    DstBlock		    "wrel_mes"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  Name			  "hrw_B"
@@ -3860,8 +3923,18 @@ Model {
 	  ZOrder		  43
 	  SrcBlock		  "Demux"
 	  SrcPort		  1
-	  DstBlock		  "Mux"
-	  DstPort		  3
+	  Points		  [-80, 0]
+	  Branch {
+	    ZOrder		    105
+	    Points		    [0, 359; -634, 0; 0, -54]
+	    DstBlock		    "Mux2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    104
+	    DstBlock		    "Mux"
+	    DstPort		    3
+	  }
 	}
 	Line {
 	  ZOrder		  44
@@ -3869,21 +3942,6 @@ Model {
 	  SrcPort		  2
 	  Points		  [-5, 0; 0, 40]
 	  DstBlock		  "Terminator"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  45
-	  SrcBlock		  "Mux"
-	  SrcPort		  1
-	  Points		  [-162, 0; 0, 20]
-	  DstBlock		  "Gain"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  46
-	  SrcBlock		  "Gain"
-	  SrcPort		  1
-	  DstBlock		  "Demux1"
 	  DstPort		  1
 	}
 	Line {
@@ -3897,16 +3955,18 @@ Model {
 	  ZOrder		  49
 	  SrcBlock		  "tor_ext"
 	  SrcPort		  1
-	  DstBlock		  "Add1"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  51
-	  SrcBlock		  "Demux1"
-	  SrcPort		  2
-	  Points		  [-370, 0]
-	  DstBlock		  "Add2"
-	  DstPort		  2
+	  Points		  [19, 0]
+	  Branch {
+	    ZOrder		    92
+	    Points		    [0, 381; -218, 0; 0, 39]
+	    DstBlock		    "Mux1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    91
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  ZOrder		  52
@@ -3919,16 +3979,18 @@ Model {
 	  ZOrder		  53
 	  SrcBlock		  "Add2"
 	  SrcPort		  1
-	  DstBlock		  "ROUE_1"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  54
-	  SrcBlock		  "Demux1"
-	  SrcPort		  3
-	  Points		  [-384, 0; 0, -385]
-	  DstBlock		  "Add3"
-	  DstPort		  2
+	  Points		  [6, 0]
+	  Branch {
+	    ZOrder		    94
+	    Points		    [0, -46; 192, 0; 0, 721]
+	    DstBlock		    "Mux1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    93
+	    DstBlock		    "ROUE_1"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  ZOrder		  55
@@ -3941,16 +4003,18 @@ Model {
 	  ZOrder		  56
 	  SrcBlock		  "Add3"
 	  SrcPort		  1
-	  DstBlock		  "ROUE_2"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  57
-	  SrcBlock		  "Demux1"
-	  SrcPort		  4
-	  Points		  [-377, 0; 0, -245]
-	  DstBlock		  "Add"
-	  DstPort		  2
+	  Points		  [32, 0]
+	  Branch {
+	    ZOrder		    96
+	    Points		    [0, 545]
+	    DstBlock		    "Mux1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    95
+	    DstBlock		    "ROUE_2"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  ZOrder		  58
@@ -3963,8 +4027,81 @@ Model {
 	  ZOrder		  59
 	  SrcBlock		  "Add"
 	  SrcPort		  1
-	  DstBlock		  "ROUE_3"
+	  Points		  [3, 0]
+	  Branch {
+	    ZOrder		    99
+	    Points		    [0, 405]
+	    DstBlock		    "Mux1"
+	    DstPort		    4
+	  }
+	  Branch {
+	    ZOrder		    98
+	    DstBlock		    "ROUE_3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  106
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  DstBlock		  "Mux3"
 	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  107
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, -80]
+	  DstBlock		  "Mux3"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  109
+	  SrcBlock		  "Mux3"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  DstBlock		  "State-Space"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  111
+	  SrcBlock		  "State-Space"
+	  SrcPort		  1
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  121
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  DstBlock		  "Demux1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  122
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  Points		  [9, 0; 0, 213; -1059, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  123
+	  SrcBlock		  "Demux1"
+	  SrcPort		  3
+	  Points		  [23, 0; 0, 192; -1087, 0; 0, -772]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  124
+	  SrcBlock		  "Demux1"
+	  SrcPort		  4
+	  Points		  [2, 0; 0, 136; -1045, 0; 0, -581]
+	  DstBlock		  "Add"
+	  DstPort		  2
 	}
       }
     }
